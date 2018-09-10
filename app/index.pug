@@ -1,0 +1,261 @@
+doctype html
+html(lang='ru')
+	title Lavant
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width, user-scalable=yes')
+	link(href='./css/style.css', rel='stylesheet')
+	body
+		include img/svg-icons.svg
+		.wrapper
+			include modules/header.pug
+			.intro
+				.intro__row
+					.intro__content
+						span.intro--title #[span 15%] Скидка
+						span.intro--text На все BEAUTY BOX
+				img(src='./pic/intro-1.jpg', width='1920', height='500', class='img-cover', alt='')
+			.navigation
+				span.navigation--item.navigation--item_blue #[i.navigation--icon.navigation--icon_ombrage]Ombrage
+				span.navigation--item.navigation--item_red #[i.navigation--icon.navigation--icon_update]Update
+			.category
+				.category--bg
+					img.img-cover(src='./pic/category-1.jpg', width='1920', height='641', alt='')
+				.category__row
+					.category__content
+						span.category--title.category--title_blue #[i.category--icon.category--icon_blue.category--icon_ombrage] Ombrage #[br] Для окрашеных волос
+						.category__nav
+							a.category--link(href='javascript:void(0);') Mask
+							a.category--link(href='javascript:void(0);') Shampoo
+							a.category--link(href='javascript:void(0);') Balm
+							a.category--link(href='javascript:void(0);') Oil
+						button.button.button_blue.button_basket Купить набор
+			.catalog(data-ratio='1.56')
+				.catalog__row
+					.catalog__item
+						.catalog__col
+							.catalog__content
+								span.catalog--title.catalog--title_blue.catalog--title_lined Mask
+								.catalog__icons
+									.catalog--icon.catalog--icon_blue
+										svg(width='32', height='32')
+											use(href='#sun')
+									.catalog--icon.catalog--icon_blue
+										svg(width='20', height='30')
+											use(href='#water')
+									.catalog--icon.catalog--icon_blue
+										svg(width='16', height='28')
+											use(href='#e')
+									.catalog--icon.catalog--icon_blue
+										svg(width='20', height='30')
+											use(href='#water-filled')
+								p Маска специально разработана для слабых, поврежденных, тонких и ослабленных волос.
+								p Она содержит инновационные, и природные ингредиенты, которые в комплексе придают прядям упругость, здоровый блеск,
+								p обеспечивают эластичность, запускают процесс обновления клеток с первого применения.
+								a.catalog--more(href='javascript:void(0);') Подробнее
+								.catalog__controls
+									span.catalog--price.catalog--price_blue 2890 р.
+									button.button.button_blue.button_basket.button_mini
+						.catalog__col
+							.catalog__pic.catalog__pic_blue
+								span.catalog__pic--title Hair mask
+								.catalog__pic--item.catalog__pic--item_blue.scale
+									img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
+					.catalog__item
+						.catalog__col
+							.catalog__content
+								span.catalog--title.catalog--title_blue Shampoo
+								.catalog__icons
+									.catalog--icon.catalog--icon_blue
+										svg(width='34', height='32')
+											use(href='#leaf')
+									.catalog--icon.catalog--icon_blue
+										svg(width='30', height='31')
+											use(href='#lines')
+									.catalog--icon.catalog--icon_blue
+										svg(width='36', height='26')
+											use(href='#molecule')
+								p Шампунь для интенсивного восстановления с высокомолекулярными кислородосодержащими соединениями - настоящее спасение для поврежденных волос.
+								p Кремнийорганические соединения в составе шампуня активизируют внутреннюю силу волоса, стимулируют синтез коллагена и насыщают волосы необходимыми микроэлементами.
+								a.catalog--more(href='javascript:void(0);') Подробнее
+								.catalog__controls
+									span.catalog--price.catalog--price_blue 2890 р.
+									button.button.button_blue.button_basket.button_mini
+						.catalog__col
+							.catalog__pic.catalog__pic_blue
+								span.catalog__pic--title Shampoo
+								.catalog__pic--item.catalog__pic--item_blue.scale
+									img.img-cover(src='./pic/catalog-2.jpg', width='480', height='749', alt='')
+					.catalog__item
+						.catalog__col
+							.catalog__content
+								span.catalog--title.catalog--title_blue BALM
+								.catalog__icons
+									.catalog--icon.catalog--icon_blue
+										svg(width='32', height='25')
+											use(href='#leaf')
+									.catalog--icon.catalog--icon_blue
+										svg(width='34', height='32')
+											use(href='#b5')
+									.catalog--icon.catalog--icon_blue
+										svg(width='30', height='31')
+											use(href='#lines')
+								p Бальзам с высокомолекулярными кислородосодержащими соединениями и пребиотиками - новое слово в уходе за поврежденными волосами. Протеины шелка в составе ускоряют регенерацию поврежденных волос.
+								p Аминокислотный комплекс дарит волосам мягкость, отсрочивает появление секущихся кончиков. 
+								p Пребиотики заботятся о сохранении микробного баланса. Не содержит парабены и SLS.
+								a.catalog--more(href='javascript:void(0);') Подробнее
+								.catalog__controls
+									span.catalog--price.catalog--price_blue 2890 р.
+									button.button.button_blue.button_basket.button_mini
+						.catalog__col
+							.catalog__pic.catalog__pic_blue
+								span.catalog__pic--title Balm
+								.catalog__pic--item.catalog__pic--item_blue.scale
+									img.img-cover(src='./pic/catalog-3.jpg', width='480', height='749', alt='')
+					.catalog__item
+						.catalog__col
+							.catalog__content
+								span.catalog--title.catalog--title_blue Spray
+								.catalog__icons
+									.catalog--icon.catalog--icon_blue
+										svg(width='32', height='25')
+											use(href='#leaf')
+									.catalog--icon.catalog--icon_blue
+										svg(width='32', height='32')
+											use(href='#sun')
+									.catalog--icon.catalog--icon_blue
+										svg(width='30', height='31')
+											use(href='#lines')
+								p За счет уникальной текстуры, масло легко распределяется, приглаживает чешуйки, придавая гладкость, блеск и мягкость натурального шелка. Не утяжеляет волосы, не создает эффекта накопления. 
+								p Создает воздухопроницаемую пленку, которая защищает волосы от негативного воздействия окружающей среда, предотвращает повреждения от высоких температур, УФ-излучения и т.д.
+								a.catalog--more(href='javascript:void(0);') Подробнее
+								.catalog__controls
+									span.catalog--price.catalog--price_blue 2890 р.
+									button.button.button_blue.button_basket.button_mini
+						.catalog__col
+							.catalog__pic.catalog__pic_blue
+								span.catalog__pic--title Oil
+								.catalog__pic--item.catalog__pic--item_blue.scale
+									img.img-cover(src='./pic/catalog-4.jpg', width='480', height='749', alt='')
+			.category
+				.category--bg
+					img.img-cover(src='./pic/category-2.jpg', width='1920', height='641', alt='')
+				.category__row
+					.category__content
+						span.category--title.category--title_red #[i.category--icon.category--icon_red.category--icon_update] Update #[br] Восстановление
+						.category__nav
+							a.category--link(href='javascript:void(0);') Mask
+							a.category--link(href='javascript:void(0);') Shampoo
+							a.category--link(href='javascript:void(0);') Balm
+							a.category--link(href='javascript:void(0);') Oil
+						button.button.button_red.button_basket Купить набор
+			.catalog(data-ratio='1.56')
+				.catalog__row
+					.catalog__item
+						.catalog__col
+							.catalog__content
+								span.catalog--title.catalog--title_red.catalog--title_lined Mask
+								.catalog__icons
+									.catalog--icon.catalog--icon_red
+										svg(width='32', height='32')
+											use(href='#sun')
+									.catalog--icon.catalog--icon_red
+										svg(width='20', height='30')
+											use(href='#water')
+									.catalog--icon.catalog--icon_red
+										svg(width='16', height='28')
+											use(href='#e')
+									.catalog--icon.catalog--icon_red
+										svg(width='20', height='30')
+											use(href='#water-filled')
+								p Маска специально разработана для слабых, поврежденных, тонких и ослабленных волос.
+								p Она содержит инновационные, и природные ингредиенты, которые в комплексе придают прядям упругость, здоровый блеск,
+								p обеспечивают эластичность, запускают процесс обновления клеток с первого применения.
+								a.catalog--more(href='javascript:void(0);') Подробнее
+								.catalog__controls
+									span.catalog--price.catalog--price_red 2890 р.
+									button.button.button_red.button_basket.button_mini
+						.catalog__col
+							.catalog__pic.catalog__pic_red
+								span.catalog__pic--title Hair mask
+								.catalog__pic--item.catalog__pic--item_red.scale
+									img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
+					.catalog__item
+						.catalog__col
+							.catalog__content
+								span.catalog--title.catalog--title_red Shampoo
+								.catalog__icons
+									.catalog--icon.catalog--icon_red
+										svg(width='34', height='32')
+											use(href='#leaf')
+									.catalog--icon.catalog--icon_red
+										svg(width='30', height='31')
+											use(href='#lines')
+									.catalog--icon.catalog--icon_red
+										svg(width='36', height='26')
+											use(href='#molecule')
+								p Шампунь для интенсивного восстановления с высокомолекулярными кислородосодержащими соединениями - настоящее спасение для поврежденных волос.
+								p Кремнийорганические соединения в составе шампуня активизируют внутреннюю силу волоса, стимулируют синтез коллагена и насыщают волосы необходимыми микроэлементами.
+								a.catalog--more(href='javascript:void(0);') Подробнее
+								.catalog__controls
+									span.catalog--price.catalog--price_red 2890 р.
+									button.button.button_red.button_basket.button_mini
+						.catalog__col
+							.catalog__pic.catalog__pic_red
+								span.catalog__pic--title Shampoo
+								.catalog__pic--item.catalog__pic--item_red.scale
+									img.img-cover(src='./pic/catalog-2.jpg', width='480', height='749', alt='')
+					.catalog__item
+						.catalog__col
+							.catalog__content
+								span.catalog--title.catalog--title_red BALM
+								.catalog__icons
+									.catalog--icon.catalog--icon_red
+										svg(width='32', height='25')
+											use(href='#leaf')
+									.catalog--icon.catalog--icon_red
+										svg(width='34', height='32')
+											use(href='#b5')
+									.catalog--icon.catalog--icon_red
+										svg(width='30', height='31')
+											use(href='#lines')
+								p Бальзам с высокомолекулярными кислородосодержащими соединениями и пребиотиками - новое слово в уходе за поврежденными волосами. Протеины шелка в составе ускоряют регенерацию поврежденных волос.
+								p Аминокислотный комплекс дарит волосам мягкость, отсрочивает появление секущихся кончиков. 
+								p Пребиотики заботятся о сохранении микробного баланса. Не содержит парабены и SLS.
+								a.catalog--more(href='javascript:void(0);') Подробнее
+								.catalog__controls
+									span.catalog--price.catalog--price_red 2890 р.
+									button.button.button_red.button_basket.button_mini
+						.catalog__col
+							.catalog__pic.catalog__pic_red
+								span.catalog__pic--title Balm
+								.catalog__pic--item.catalog__pic--item_red.scale
+									img.img-cover(src='./pic/catalog-3.jpg', width='480', height='749', alt='')
+					.catalog__item
+						.catalog__col
+							.catalog__content
+								span.catalog--title.catalog--title_red Oil
+								.catalog__icons
+									.catalog--icon.catalog--icon_red
+										svg(width='32', height='25')
+											use(href='#leaf')
+									.catalog--icon.catalog--icon_red
+										svg(width='32', height='32')
+											use(href='#sun')
+									.catalog--icon.catalog--icon_red
+										svg(width='30', height='31')
+											use(href='#lines')
+								p За счет уникальной текстуры, масло легко распределяется, приглаживает чешуйки, придавая гладкость, блеск и мягкость натурального шелка. Не утяжеляет волосы, не создает эффекта накопления. 
+								p Создает воздухопроницаемую пленку, которая защищает волосы от негативного воздействия окружающей среда, предотвращает повреждения от высоких температур, УФ-излучения и т.д.
+								a.catalog--more(href='javascript:void(0);') Подробнее
+								.catalog__controls
+									span.catalog--price.catalog--price_red 2890 р.
+									button.button.button_red.button_basket.button_mini
+						.catalog__col
+							.catalog__pic.catalog__pic_red
+								span.catalog__pic--title Oil
+								.catalog__pic--item.catalog__pic--item_red.scale
+									img.img-cover(src='./pic/catalog-4.jpg', width='480', height='749', alt='')
+		include modules/footer.pug
+		include modules/modals.pug
+		script(src='./js/libs.js')
+		script(src='./js/scripts.js')

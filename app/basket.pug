@@ -1,0 +1,105 @@
+doctype html
+html(lang='ru')
+	title Lavant
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width, user-scalable=yes')
+	link(href='./css/style.css', rel='stylesheet')
+	body
+		include img/svg-icons.svg
+		.wrapper
+			include modules/header.pug
+			.content
+				.content__header
+					.breadcrumbs.breadcrumbs_blue
+						li
+							a(href='javascript:void(0);') Главная
+						li
+							span Корзина
+					span.title-h1 Корзина
+			.basket
+				.basket__row
+					.basket-table
+						.basket-row
+							.basket-td.basket-td_remove
+								span.basket--remove
+									svg(width='14', height='14')
+										use(href='#close')
+							.basket-td.basket-td_pic
+								.basket--pic
+									img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
+							.basket-td.basket-td_title
+								span.basket--title.basket--title_blue #[a(href='javascript:void(0);') BALM]
+							.basket-td.basket-td_quantity
+								.elem-quantity
+									span.elem-quantity--minus
+									input.elem-quantity--input(value='1')
+									span.elem-quantity--plus
+							.basket-td.basket-td_price
+								span.basket--price 2890 р.
+						.basket-row
+							.basket-td.basket-td_remove
+								span.basket--remove
+									svg(width='14', height='14')
+										use(href='#close')
+							.basket-td.basket-td_pic
+								.basket--pic
+									img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
+							.basket-td.basket-td_title
+								span.basket--title.basket--title_blue #[a(href='javascript:void(0);') BALM]
+							.basket-td.basket-td_quantity
+								.elem-quantity
+									span.elem-quantity--minus
+									input.elem-quantity--input(value='1')
+									span.elem-quantity--plus
+							.basket-td.basket-td_price
+								span.basket--price 2890 р.
+						.basket-row
+							.basket-td.basket-td_remove
+								span.basket--remove
+									svg(width='14', height='14')
+										use(href='#close')
+							.basket-td.basket-td_pic
+								.basket--pic
+									img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
+							.basket-td.basket-td_title
+								span.basket--title.basket--title_blue #[a(href='javascript:void(0);') BALM]
+							.basket-td.basket-td_quantity
+								.elem-quantity
+									span.elem-quantity--minus
+									input.elem-quantity--input(value='1')
+									span.elem-quantity--plus
+							.basket-td.basket-td_price
+								span.basket--price 2890 р.
+			.order
+				.order-header
+					.order-header__row
+						span.order-header--title Оформление заказа
+						span.order-header--subtitle Оставьте свой телефон, менеджер перезвонит, уточнит детали и оформит заявку на доставку без предоплаты
+				.order__row
+					.form
+						.form__item
+							.form--input
+								input(type='text', placeholder='ФИО')
+						.form__item
+							.form--input
+								input(type='text', placeholder='+7 (_ _ _) _ _ _ - _ _ - _ _')
+						.form__item
+							.form--input
+								input(type='text', placeholder='Адрес доставки')
+						.form__item
+							.form--input
+								input(type='text', placeholder='E-mail (для отслеживания статуса заказа)')
+						.form__item
+							.form--input.form--input_error
+								input(type='text', value='snadn.ru')
+							span.form--message.form--message_error Неправильно введен e-mail
+						.form__item
+							.form--input.form--input_success
+								input(type='text', value='snadn@yandex.ru')
+						.form__agreement
+							label #[input(type='checkbox', checked)] С условиями оферты ознакомлен и согласен
+						.button.button_order.form_button Оформить заказ
+		include modules/footer.pug
+		include modules/modals.pug
+		script(src='./js/libs.js')
+		script(src='./js/scripts.js')

@@ -1,0 +1,97 @@
+div.checker,
+div.radio {
+	position: relative
+}
+
+div.checker,
+div.checker input,
+div.checker span {
+	width: 26px;
+	height: 26px;
+	cursor: pointer
+}
+
+div.radio,
+div.radio input,
+div.radio span {
+	width: 20px;
+	height: 20px;
+	cursor: pointer	
+}
+
+div.checker input,
+div.radio input {
+	filter: alpha(opacity=0);
+	border: none
+}
+
+div.checker span,
+div.radio input,
+div.radio span {
+	zoom: 1;
+	text-align: center
+}
+
+div.checker span {
+	position: relative;
+	display: -moz-inline-box;
+	display: inline-block;
+	border: 1px solid #000000;
+}
+
+div.checker span:before {
+	content: '';
+	position: absolute;
+	left: 3px;
+	top: 6px;
+	width: 18px;
+	height: 14px;
+	background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxOCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMC43NDUwNDkgNy42NUMwLjYxNTA0OSA3LjUyIDAuNTUwMDQ5IDcuMzI1IDAuNTUwMDQ5IDcuMTk1QzAuNTUwMDQ5IDcuMDY1IDAuNjE1MDQ5IDYuODcgMC43NDUwNDkgNi43NEwxLjY1NTA1IDUuODNDMS45MTUwNSA1LjU3IDIuMzA1MDUgNS41NyAyLjU2NTA1IDUuODNMMi42MzAwNSA1Ljg5NUw2LjIwNTA1IDkuNzNDNi4zMzUwNSA5Ljg2IDYuNTMwMDUgOS44NiA2LjY2MDA1IDkuNzNMMTUuMzcgMC42OTVIMTUuNDM1QzE1LjY5NSAwLjQzNSAxNi4wODUgMC40MzUgMTYuMzQ1IDAuNjk1TDE3LjI1NSAxLjYwNUMxNy41MTUgMS44NjUgMTcuNTE1IDIuMjU1IDE3LjI1NSAyLjUxNUw2Ljg1NTA1IDEzLjMwNUM2LjcyNTA1IDEzLjQzNSA2LjU5NTA1IDEzLjUgNi40MDAwNSAxMy41QzYuMjA1MDUgMTMuNSA2LjA3NTA1IDEzLjQzNSA1Ljk0NTA1IDEzLjMwNUwwLjg3NTA0OSA3Ljg0NUwwLjc0NTA0OSA3LjY1WiIgZmlsbD0iYmxhY2siLz48L3N2Zz4=') no-repeat 0 0;
+	opacity: 0;
+}
+
+div.checker span.checked:before {
+	opacity: 1;
+}
+
+div.checker input {
+	opacity: 0;
+	-moz-opacity: 0;
+	background: 0 0;
+	display: -moz-inline-box;
+	display: inline-block;
+	zoom: 1
+}
+
+div.radio span {
+	position: relative;
+	display: -moz-inline-box;
+	display: inline-block;
+	border: 1px solid #dddddd;
+	border-radius: 50%;
+}
+
+div.radio span:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+	background: #ff8400;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+div.radio span.checked:before {
+	opacity: 1;
+}
+
+div.radio input {
+	opacity: 0;
+	-moz-opacity: 0;
+	background: 0 0;
+	display: -moz-inline-box;
+	display: inline-block
+}

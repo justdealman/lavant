@@ -1,0 +1,2318 @@
+// Fonts
+
+@import './mixins/fonts.styl'
+webfont('Futura PT', 'futurapt-regular', normal)
+webfont('Noto Sans', 'notosans-regular', normal)
+
+// Variables
+
+colorBlack = #000000
+colorWhite = #ffffff
+colorDark = #333333
+colorGrey = #2e353a
+colorRed = #e50046
+colorBlue = #0578be
+f-futura = 'Futura PT', sans-serif
+f-noto = 'Noto Sans', sans-serif
+
+// Default
+
+html
+	height 100%
+
+	*
+		max-height 1000000px
+		vertical-align top
+		box-sizing border-box
+
+	*:before
+	*:after
+		vertical-align top
+		box-sizing border-box
+
+body
+	width 100%
+	height 100%
+	color colorBlack
+	font-size 12px
+	line-height 16px
+	font-family f-futura
+	padding 0
+	margin 0
+	background #f9f9f9
+	-webkit-tap-highlight-color transparent
+
+p
+	text-indent 0
+	padding 0
+	margin 0 0 16px
+
+table
+	margin 0 0 16px
+	border-collapse collapse
+
+	td
+		padding 0
+
+:focus
+	outline none
+
+img
+	padding 0
+	margin 0
+	border 0
+
+a
+	color colorBlack
+	text-decoration none
+
+	&:hover
+		text-decoration none
+
+form
+	margin 0
+
+ul
+	margin 0 0 10px 16px
+	padding 0
+
+	li
+		padding 0
+		list-style none
+
+ol
+	margin 0 0 10px 18px
+	padding 0
+
+	li
+		padding 0 0 0 16px
+
+input
+select
+textarea
+	color colorDark
+	font-size 12px
+	font-family f-futura
+	padding 0
+	margin 0
+	background none
+	border 0
+	box-sizing border-box
+
+textarea
+	overflow auto
+
+button
+	font-family f-futura
+	margin 0
+	border 0
+	box-sizing border-box
+
+	&::-moz-focus-inner
+		padding 0
+		border 0
+
+::-webkit-input-placeholder
+	color #c0c0c0
+
+:-moz-placeholder
+	color #c0c0c0
+
+::-moz-placeholder
+	color #c0c0c0
+
+:-ms-input-placeholder
+	color #c0c0c0
+
+.img-cover
+.img-contain
+	display none !important
+
+.wrapper
+	min-height 100%
+	padding-bottom 104px
+
+// Libs
+
+@import '../css/libs.css'
+
+// Core
+
+.panel
+	background #000000
+	
+	&--message
+		display block
+		max-width 1240px
+		color colorWhite
+		font-size 24px
+		line-height 28px
+		font-family f-noto
+		text-align center
+		padding 11px 30px 15px
+		margin 0 auto
+		
+	&--close
+		display inline-block
+		width 14px
+		height 14px
+		cursor pointer
+		margin -6px -24px 0 4px
+		background url('../img/panel-close.svg') no-repeat 0 0
+
+.header
+	background #ffffff
+	box-shadow inset 0 -1px 0 rgba(0, 0, 0, .15)
+	
+	&_footer
+		margin-top -104px
+		background-color #f2f2f2
+		box-shadow none
+
+	&__row
+		height 104px
+		max-width 1240px
+		text-align right
+		padding 0 30px
+		margin 0 auto
+		
+	&--logo
+		float left
+		display inline-block
+		width 240px
+		height 103px
+		margin-left -30px
+		background url('../img/logo.svg') no-repeat 30px 20px
+		
+	&--basket
+		display inline-block
+		width 40px
+		height 40px
+		margin 32px 0 0
+		
+		svg
+			fill colorBlack
+			transition fill .2s ease
+
+.menu-open
+	display none
+
+.nav
+	display inline-block
+	width 68.644%
+	max-width 810px
+	margin 0 46px 0 0
+	
+	&__row
+		display flex
+		justify-content space-between
+	
+	a
+		position relative
+		display inline-block
+		color colorGrey
+		font-size 16px
+		line-height 21px
+		letter-spacing .05em
+		text-transform uppercase
+		white-space nowrap
+		padding 42px 15px 41px
+		
+		&:after
+			content ''
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 2px
+			background transparent
+			transition background-color .1s ease
+			
+		&:hover
+			&:after
+				background-color colorGrey
+
+		&.is-red
+			color colorRed
+			
+			&:hover
+				&:after
+					background-color colorRed
+		
+		&.is-blue
+			color colorBlue
+			
+			&:hover
+				&:after
+					background-color colorBlue
+		
+.intro
+	background-color #eeeeee
+
+	&__row
+		position relative
+		max-width 1240px
+		min-height 498px
+		padding 0 30px
+		margin 0 auto
+		
+	&__content
+		position absolute
+		left 30px
+		top 25.7%
+		display inline-block
+		color colorGrey
+		
+	&--title
+		display block
+		font-size 40px
+		line-height 50px
+		text-transform uppercase
+		margin 0 0 15px
+		
+		span
+			color #e50046
+
+	&--text
+		display block
+		font-size 24px
+		line-height 28px
+		margin 0 0 15px
+		
+.navigation
+	&--item
+		display inline-block
+		color colorWhite
+		width 50%
+		font-size 24px
+		line-height 28px
+		text-align center
+		text-transform uppercase
+		letter-spacing .05em
+		padding 55px 30px 54px
+		
+		&_blue
+			background-color colorBlue
+		
+		&_red
+			background-color colorRed
+			
+	&--icon
+		display inline-block
+		background-repeat no-repeat
+		background-position 0 0
+		
+		&_ombrage
+			width 74px
+			height 91px
+			margin -32px 20px -31px 0
+			background-image url('../img/logo-ombrage.svg')
+
+		&_update
+			width 42px
+			height 88px
+			margin -30px 20px -30px 0
+			background-image url('../img/logo-update.svg')
+
+.category
+	position relative
+	background #e0dfdf
+	
+	&--bg
+		position absolute
+		left 0
+		top 50%
+		width 100%
+		height 641px
+		margin-top -321px
+	
+	&__row
+		position relative
+		display flex
+		justify-content flex-end
+		align-items center
+		max-width 1240px
+		min-height 641px
+		text-align right
+		padding 0 30px
+		margin 0 auto
+
+	&__content
+		display inline-block
+		width 50%
+		text-align left
+		padding 99px 0 81px 110px
+
+	&--title
+		position relative
+		display block
+		font-size 24px
+		line-height 28px
+		text-transform uppercase
+		letter-spacing .05em
+		padding 0
+		margin 0 0 51px
+
+		&_blue
+			color colorBlue
+
+		&_red
+			color colorRed
+
+	&--icon
+		position absolute
+		top 50%
+		left -100px
+		display block
+		width 80px
+		height 80px
+		margin-top -39px
+		background-repeat no-repeat
+		background-position 50% 50%
+		border-radius 50%
+		
+		&_blue
+			background-color colorBlue
+			
+		&_red
+			background-color colorRed
+		
+		&_ombrage
+			background-image url('../img/logo-ombrage.svg')
+			background-size 37px auto
+		
+		&_update
+			background-image url('../img/logo-update.svg')
+			background-size 20px auto
+			
+	&__nav
+		margin 0 0 57px
+			
+	&--link
+		position relative
+		display block
+		color colorGrey
+		font-size 26px
+		line-height 32px
+		font-family f-noto
+		padding 9px 36px 8px 0
+		border-bottom 1px solid colorGrey
+		
+		&:after
+			content ''
+			position absolute
+			right 10px
+			top 19px
+			width 9px
+			height 9px
+			background url('../img/link-arrow.svg') no-repeat 0 0
+			transition transform .2s ease
+			
+		&:hover
+			&:after
+				transform translateX(10px)
+
+.button
+	display inline-block
+	min-width 280px
+	color colorWhite
+	font-size 16px
+	line-height 24px
+	font-family f-noto
+	text-align center
+	text-transform uppercase
+	letter-spacing .05em
+	cursor pointer
+	padding 16px 20px
+	margin 0 0 40px
+	border-radius 28px
+	transition background-color .2s ease
+	
+	&_red
+		background-color colorRed
+		
+		&:hover
+			background-color #f9145a
+		
+		&:active
+			background-color #d10032
+
+	&_blue
+		background-color colorBlue
+		
+		&:hover
+			background-color #198cd2
+			
+		&:active
+			background-color #0064aa
+		
+	&_basket
+		&:after
+			content ''
+			display inline-block
+			width 16px
+			height 18px
+			margin 2px 0 4px 9px
+			background url('../img/basket-icon.svg') no-repeat 0 0
+		
+	&_mini
+		min-width 0
+		width 56px
+			
+		&:after
+			margin-left 0
+			
+	&_small
+		min-width 0
+		width 36px
+		height 36px
+		padding 0
+		margin 0
+		background-color colorDark
+		
+		&:after
+			width 14px
+			height 18px
+			margin 8px 0 10px
+			background-size 14px 18px
+			
+	&_order
+		min-width 262px
+		background-color colorBlack
+
+.catalog
+	&__row
+		max-width 1240px
+		padding 200px 0 0
+		margin 0 auto
+		
+	&__item
+		display flex
+		align-items center
+		font-size 0
+		padding 0 0 166px
+		
+		&:nth-child(2n+1)
+			& ^[0]__col:last-child
+				text-align right
+
+	&__col
+		display inline-block
+		width 50%
+		text-align left
+		padding 0 30px
+		
+	&__content
+		display inline-block
+		width 100%
+		font-size 0
+		max-width 480px
+		text-align left
+		padding-bottom 20px
+		
+		p
+			max-width 380px
+			color colorDark
+			font-size 16px
+			line-height 28px
+			font-family f-noto
+			margin 0 0 28px
+
+	&--title
+		position relative
+		display inline-block
+		font-size 54px
+		line-height 63px
+		text-transform uppercase
+		letter-spacing .05em
+		padding 0 0 6px
+		margin 0 26px 25px 0
+
+		&_blue
+			color colorBlue
+			
+			&:after
+				background-color colorBlue
+			
+		&_red
+			color colorRed
+			
+			&:after
+				background-color colorRed
+				
+		&_lined
+			&:after
+				content ''
+				position absolute
+				left 0
+				bottom 0
+				width 68px
+				height 3px
+				
+	&__icons
+		display inline-block
+		margin 12px 0 32px
+				
+	&--icon
+		position relative
+		display inline-block
+		width 40px
+		height 40px
+		margin 0 10px 10px 0
+		
+		svg
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%,-50%)
+			
+		&_blue
+			fill #b3d3e5
+			
+		&_red
+			fill #f7b3c7
+			
+	
+	&--more
+		position relative
+		display inline-block
+		color colorGrey
+		font-size 16px
+		line-height 24px
+		letter-spacing .05em
+		text-transform uppercase
+		margin -5px 0 24px
+		
+		&:after
+			content ''
+			position absolute
+			left 0
+			bottom 1px
+			width 100%
+			border-bottom 1px solid colorBlack
+			transition border-color .1s ease
+			
+		&:hover
+			&:after
+				border-bottom-color transparent
+				
+	&__controls
+		display flex
+		align-items center
+		font-size 0
+		margin 54px 0 0
+		
+		.button
+			margin-bottom 0
+		
+	&--price
+		display inline-block
+		font-size 30px
+		line-height 35px
+		text-transform uppercase
+		margin 0 11px 2px 0
+		
+		&_blue
+			color colorBlue
+			
+		&_red
+			color colorRed
+			
+	&__pic
+		position relative
+		display inline-block
+		width 100%
+		max-width 520px
+		padding-bottom 34px
+		padding-left 40px
+		
+		&:before
+			content ''
+			position absolute
+			left 0
+			top 50%
+			background-repeat no-repeat
+			background-position 0 0
+			opacity .05
+			
+		&_blue
+			&:before
+				width 513px
+				height 544px
+				margin -225px 0 0 -216px
+				background-image url('../img/pattern-blue-left.svg')
+			
+		&_red
+			&:before
+				width 358px
+				height 433px
+				margin -179px 0 0 -139px
+				background-image url('../img/pattern-red-left.svg')
+
+		&--title
+			position absolute
+			left -3px
+			top 0
+			display block
+			color colorGrey
+			font-size 16px
+			line-height 24px
+			font-family f-noto
+			transform rotate(-90deg) translateX(-100%)
+			transform-origin 0 0
+		
+		&--item
+			position relative
+			z-index 1
+			height 749px
+			background #efefef
+			
+			&:after
+				content ''
+				position absolute
+				left 40px
+				bottom -34px
+				width 51px
+				height 69px
+				background-repeat no-repeat
+				background-position 0 0
+				
+			&_blue
+				&:after
+					background-image url('../img/ribbon-blue.svg')
+				
+			&_red
+				&:after
+					background-image url('../img/ribbon-red.svg')
+
+	&__item
+		&:nth-child(2n)
+			& ^[0]__col:first-child
+				order 2
+				text-align right
+
+			& ^[0]__content
+				align-self flex-end
+				
+			& ^[0]__pic
+				padding-left 0
+				padding-right 40px
+				
+				&--title
+					left auto
+					top -24px
+					right -4px
+					transform rotate(-90deg) translateX(0)
+					transform-origin 100% 100%
+		
+				&:before
+					left auto
+					right 0
+					
+				&_blue
+					&:before
+						margin -173px -217px 0 0
+						background-image url('../img/pattern-blue-right.svg')
+					
+				&_red
+					&:before
+						margin -166px -133px 0 0
+						background-image url('../img/pattern-red-right.svg')
+
+.breadcrumbs
+	font-size 0
+	margin 0 0 23px
+	
+	li
+		display inline-block
+		font-size 14px
+		line-height 16px
+		font-family f-noto
+		margin 0 0 4px
+		
+		&:after
+			content '-'
+			display inline-block
+			padding 0 4px
+			
+		&:last-child
+			&:after
+				display none
+			
+	&_blue
+		li
+		a
+			color colorBlue
+			
+		span
+			color #b3d3e5
+			
+	&_red
+		li
+		a
+			color colorRed
+			
+		span
+			color #f08eac
+
+.card
+	overflow hidden
+	position relative
+	background #efefef
+	
+	&__row
+		position relative
+		display flex
+		flex-direction column
+		justify-content space-between
+		max-width 1240px
+		min-height 800px
+		padding 22px 30px 60px
+		margin 0 auto
+		
+	&__content
+		position relative
+		z-index 1
+		text-align center
+		margin 0 0 100px
+		
+	&--logo
+		display block
+		width 110px
+		height 110px
+		margin 38px auto 15px
+		background-repeat no-repeat
+		background-position 50% 50%
+		border-radius 50%
+		
+		&_blue
+			background-color colorBlue
+		
+		&_red
+			background-color colorRed
+		
+		&_ombrage
+			background-image url('../img/logo-ombrage.svg')
+			background-size 51px auto
+		
+		&_update
+			background-image url('../img/logo-update.svg')
+			background-size 28px auto
+		
+	&--title
+		display block
+		font-size 72px
+		line-height 84px
+		text-transform uppercase
+		letter-spacing .05em
+		padding 0
+		margin 0 0 14px
+		
+		&_blue
+			color colorBlue
+			
+		&_red
+			color colorRed
+			
+	&__icons
+		font-size 0
+		margin 0 0 14px
+		
+		&_blue
+			svg
+				fill #b3d3e5
+			
+		&_red
+			svg
+				fill #f7b3c7
+		
+	&--icon
+		position relative
+		display inline-block
+		width 40px
+		height 40px
+		margin 0 5px 10px
+		
+		svg
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%,-50%)
+		
+	&--pic
+		position absolute
+		bottom 0
+		width 812px
+		user-select none
+		
+		img
+			width 100%
+			height auto
+		
+		&_left
+			right 50%
+			
+		&_right
+			left 50%
+			
+	&__controls
+		position relative
+		z-index 1
+		font-size 0
+		text-align center
+		
+	&--price
+		display inline-block
+		font-size 30px
+		line-height 35px
+		text-transform uppercase
+		padding 10px 0 11px
+		margin 0 10px 0 0
+		
+		&_blue
+			color colorBlue
+			
+		&_red
+			color colorRed
+			
+	.button
+		margin-bottom 0
+		
+.about
+	&__row
+		max-width 1240px
+		font-size 0
+		padding 100px 0 170px
+		margin 0 auto
+		
+	&__lc
+		display inline-block
+		width 56.45%
+		padding 0 30px
+		
+	&__content
+		max-width 580px
+		
+		p
+			color colorDark
+			font-size 16px
+			line-height 28px
+			font-family f-noto
+			margin 0 0 28px
+		
+	&--title
+		display block
+		font-size 36px
+		line-height 47px
+		padding 0
+		margin 0 0 23px
+		
+	&__rc
+		display inline-block
+		width 43.55%
+		padding 0 30px
+
+	&-item
+		display flex
+		justify-content center
+		flex-direction column
+		min-height 211px
+		padding 26px 50px
+		margin 0 0 30px
+		
+		&--title
+			display block
+			font-size 40px
+			line-height 52px
+			text-transform uppercase
+			padding 0
+			margin 0
+			
+			span
+				color #e50046
+		
+		&--subtitle
+			display block
+			font-size 24px
+			line-height 32px
+			font-family f-noto
+			margin 11px 0 0
+		
+		&_discount
+			color colorGrey
+			background #eeeeee url('../pic/about-discount-bg.jpg') no-repeat 100% 100%
+			background-size auto 100%
+		
+		&_delivery
+			color colorWhite
+			background colorDark  url('../pic/about-delivery-bg.jpg') no-repeat 100% 50%
+			background-size auto 100%
+			
+			& ^[-1]--subtitle
+				margin-top 20px
+				
+.title-bg
+	display block
+	background url('../img/title-bg.jpg') no-repeat 50% 50%
+	background-size cover
+	
+	span
+		display block
+		max-width 1240px
+		font-size 54px
+		line-height 62px
+		text-align center
+		padding 104px 30px
+		margin 0 auto
+		
+.articles
+	border-bottom 1px solid #c4c4c4
+	
+	&__row
+		max-width 1240px
+		font-size 0
+		padding 100px 30px 43px 20px
+		margin 0 auto
+		
+	&__item
+		position relative
+		display inline-block
+		width 50%
+		padding 0 0 0 70px
+		margin 0 0 32px
+		
+		&_wide
+			width 100%
+
+		p
+			color colorDark
+			font-size 16px
+			line-height 28px
+			font-family f-noto
+			margin 0 0 28px
+			
+	&--title
+		display block
+		font-size 36px
+		line-height 47px
+		margin 0 0 23px
+		
+	&--icon
+		position absolute
+		left 10px
+		top 4px
+		display block
+		width 40px
+		height 40px
+		
+		svg
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%,-50%)
+			
+		&_blue
+			svg
+				fill colorBlue
+			
+		&_red
+			svg
+				fill colorRed
+				
+	&-composition
+		padding 41px 58px 51px
+		margin 54px 0 24px -60px
+		background #ffffff
+		
+		&--title
+			display block
+			font-size 28px
+			line-height 33px
+			padding 0
+			margin 0 0 19px
+		
+		&__list
+			column-count 2
+			column-gap 10px
+			margin 0
+		
+			li
+				display inline-block
+				margin 0 0 28px
+				
+			p
+				max-width 480px
+				color colorDark
+				font-size 16px
+				line-height 28px
+				padding-right 25px
+				margin 0
+				
+				&:before
+					content '•'
+					padding-right 4px
+					
+.picture
+	position relative
+	z-index 1
+	height 900px
+	margin-top -1px
+		
+.other
+	overflow hidden
+	position relative
+	z-index 1
+	margin -1px 0 0
+	background #e0dfdf
+	
+	&--bg
+		position absolute
+		left 50%
+		top 0
+		width 1180px
+		height 480px
+		margin-left -590px
+		background-position 50% 0 !important
+	
+	&__row
+		position relative
+		z-index 1
+		max-width 1240px
+		text-align center
+		padding 349px 30px 63px
+		margin 0 auto
+		
+	&--title
+		display block
+		font-size 54px
+		line-height 69px
+		margin 0
+		
+		span
+			display block
+		
+		&_blue
+			span
+				color colorBlue
+		
+		&_red
+			span
+				color colorRed
+
+.grid
+	&__row
+		max-width 1240px
+		font-size 0
+		text-align center
+		padding 101px 20px 180px
+		margin 0 auto
+		
+	&__item
+		display inline-block
+		width 33.33%
+		text-align left
+		padding 0 10px
+		margin 0 0 20px
+		
+	&__controls
+		margin 78px 10px 0
+		
+.item-card
+	text-align center
+	
+	&--title
+		display block
+		color colorGrey
+		font-size 28px
+		line-height 33px
+		text-transform uppercase
+		letter-spacing .05em
+		margin 0 0 22px
+		
+	&--pic
+		height 591px
+		margin 0 0 19px
+		background-color #efefef
+		
+	&--price
+		display inline-block
+		color colorDark
+		font-size 20px
+		line-height 23px
+		text-transform uppercase
+		padding 7px 0 8px
+		margin 0 10px 0 0
+		
+	&--button
+		min-width 327px
+		margin 0 0 20px
+
+.content
+	&__header
+		max-width 1240px
+		text-align center
+		padding 22px 30px 53px
+		margin 0 auto
+		
+.title-h1
+	display block
+	font-size 72px
+	line-height 84px
+	text-transform uppercase
+	letter-spacing .05em
+	padding 0
+	margin 0 0 20px
+	
+.basket
+	margin -20px 0 0
+
+	&__row
+		max-width 1240px
+		padding 0 30px 80px
+		margin 0 auto
+		
+	&-table
+		display table
+		width 100%
+		margin 0
+		border-collapse separate
+		border-spacing 0 20px
+		
+	&-row
+		display table-row
+		
+	&-td
+		position relative
+		display table-cell
+		vertical-align middle
+		border-bottom 1px solid #d0cece
+		border-top 1px solid #d0cece
+		
+		&:first-child
+			border-left 1px solid #d0cece
+		
+		&:last-child
+			border-right 1px solid #d0cece
+		
+		&_remove
+			width 8.35%
+		
+		&_pic
+			width 179px
+			
+		&_title
+			padding 20px 3.4% 20px 10.2%
+			
+		&_quantity
+			width 1%
+			white-space nowrap
+			padding 20px 6.7% 20px
+			
+		&_price
+			width 1%
+			text-align center
+			padding 20px 47px
+			white-space nowrap
+			background #f2f2f2
+			
+	&--remove
+		position absolute
+		left 50%
+		top 50%
+		display block
+		width 30px
+		height 30px
+		cursor pointer
+		margin -14px 0 0 -13px
+		
+		svg
+			position absolute
+			left 50%
+			top 50%
+			fill #c4c4c4
+			transform translate(-50%,-50%)
+			transition fill .2s ease
+			
+		&:hover
+			svg
+				fill colorGrey
+
+	&--pic
+		height 279px
+		
+	&--title
+		display block
+		font-size 36px
+		line-height 47px
+		text-transform uppercase
+		letter-spacing .05em
+		
+		&_blue
+			color colorBlue
+			
+			a
+				color colorBlue
+			
+		&_red
+			color colorRed
+			
+			a
+				color colorBlue
+			
+	&--price
+		display block
+		color colorDark
+		font-size 28px
+		line-height 33px
+		text-align center
+		text-transform uppercase
+		
+.elem-quantity
+	position relative
+	width 153px
+	height 40px
+	padding 0 40px
+	margin 2px 0 0
+	user-select none
+	
+	&--minus
+	&--plus
+		position absolute
+		top 0
+		display block
+		width 40px
+		height 40px
+		cursor pointer
+		
+		&:before
+			content ''
+			position absolute
+			top 50%
+			left 50%
+			width 21px
+			height 3px
+			margin -1px 0 0 -10px
+			background colorDark
+			transition background-color .2s ease
+			border-radius 1px
+			
+		&:hover
+			&:before
+			&:after
+				background-color colorBlack
+	
+	&--minus
+		left 0
+		
+	&--plus
+		right 0
+		
+		&:after
+			content ''
+			position absolute
+			top 50%
+			left 50%
+			width 3px
+			height 21px
+			margin -10px 0 0 -1px
+			background colorDark
+			
+	&--input
+		width 100%
+		color colorDark
+		font-size 24px
+		text-align center
+		padding 5px 0 4px
+
+.order
+	&-header
+		background #efefef
+		
+		&__row
+			max-width 1240px
+			color colorDark
+			text-align center
+			padding 27px 30px 40px
+			margin 0 auto
+			
+		&--title
+			display block
+			font-size 54px
+			line-height 63px
+			
+		&--subtitle
+			display block
+			font-size 16px
+			line-height 28px
+			font-family f-noto
+			margin 6px 0 0
+			
+	&__row
+		max-width 1240px
+		padding 65px 30px 65px
+		margin 0 auto
+		
+.form
+	max-width 580px
+	text-align center
+	margin 0 auto
+	
+	&__item
+		text-align left
+		margin 0 0 35px
+		
+	&--input
+		position relative
+		
+		input
+		textarea
+			width 100%
+			font-size 16px
+			font-family f-noto
+			padding 6px 50px 6px 0
+			border-bottom 1px solid colorGrey
+			
+		&_success
+		&_error
+			&:before
+				content ''
+				position absolute
+				right 0
+				top 0
+				z-index 1
+				width 32px
+				height 100%
+			
+		&_success
+			input
+			textarea
+				border-bottom-color #cddc39
+				
+			&:after
+				content ''
+				position absolute
+				right 5px
+				top 11px
+				z-index 1
+				width 22px
+				height 16px
+				background url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMC44NDAwOTggOC44QzAuNjgwMDk4IDguNjQgMC42MDAwOTggOC40IDAuNjAwMDk4IDguMjRDMC42MDAwOTggOC4wOCAwLjY4MDA5OCA3Ljg0IDAuODQwMDk4IDcuNjhMMS45NjAxIDYuNTZDMi4yODAxIDYuMjQgMi43NjAxIDYuMjQgMy4wODAxIDYuNTZMMy4xNjAxIDYuNjRMNy41NjAxIDExLjM2QzcuNzIwMSAxMS41MiA3Ljk2MDEgMTEuNTIgOC4xMjAxIDExLjM2TDE4Ljg0MDEgMC4yNEgxOC45MjAxQzE5LjI0MDEgLTAuMDggMTkuNzIwMSAtMC4wOCAyMC4wNDAxIDAuMjRMMjEuMTYwMSAxLjM2QzIxLjQ4MDEgMS42OCAyMS40ODAxIDIuMTYgMjEuMTYwMSAyLjQ4TDguMzYwMSAxNS43NkM4LjIwMDEgMTUuOTIgOC4wNDAxIDE2IDcuODAwMSAxNkM3LjU2MDEgMTYgNy40MDAxIDE1LjkyIDcuMjQwMSAxNS43NkwxLjAwMDEgOS4wNEwwLjg0MDA5OCA4LjhaIiBmaWxsPSIjQ0REQzM5Ii8+PC9zdmc+') no-repeat 0 0
+			
+		&_error
+			input
+			textarea
+				border-bottom-color colorRed
+				
+			&:after
+				content ''
+				position absolute
+				right 5px
+				top 8px
+				z-index 1
+				width 22px
+				height 22px
+				background  url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTEuMDAwMSAwLjYwMDAwNkM1LjI1NjY3IDAuNjAwMDA2IDAuNjAwMDk4IDUuMjU2NTggMC42MDAwOTggMTFDMC42MDAwOTggMTYuNzQ0MSA1LjI1NjY3IDIxLjQgMTEuMDAwMSAyMS40QzE2Ljc0NDIgMjEuNCAyMS40MDAxIDE2Ljc0NDcgMjEuNDAwMSAxMUMyMS40MDAxIDUuMjU2NTggMTYuNzQ0MSAwLjYwMDAwNiAxMS4wMDAxIDAuNjAwMDA2Wk0xMS4wMDAxIDE5LjQ1QzYuMzMzMTIgMTkuNDUgMi41NTAxMyAxNS42NjcgMi41NTAxMyAxMUMyLjU1MDEzIDYuMzMzMDMgNi4zMzMxMiAyLjU1MDA0IDExLjAwMDEgMi41NTAwNEMxNS42NjcxIDIuNTUwMDQgMTkuNDUwMSA2LjMzMzAzIDE5LjQ1MDEgMTFDMTkuNDUwMSAxNS42NjcgMTUuNjY3MSAxOS40NSAxMS4wMDAxIDE5LjQ1Wk0xMS4wMDA4IDUuMTYxMDRDMTAuMjU1OSA1LjE2MTA0IDkuNjkyMjcgNS41NDk3NiA5LjY5MjI3IDYuMTc3NjRWMTEuOTM2NkM5LjY5MjI3IDEyLjU2NTIgMTAuMjU1OCAxMi45NTI2IDExLjAwMDggMTIuOTUyNkMxMS43Mjc1IDEyLjk1MjYgMTIuMzA5MiAxMi41NDkgMTIuMzA5MiAxMS45MzY2VjYuMTc3NjRDMTIuMzA5MiA1LjU2NDY3IDExLjcyNzUgNS4xNjEwNCAxMS4wMDA4IDUuMTYxMDRaTTExLjAwMDggMTQuMjVDMTAuMjg1MSAxNC4yNSA5LjcwMjY3IDE0LjgzMjQgOS43MDI2NyAxNS41NDg3QzkuNzAyNjcgMTYuMjYzNyAxMC4yODUxIDE2Ljg0NjEgMTEuMDAwOCAxNi44NDYxQzExLjcxNjQgMTYuODQ2MSAxMi4yOTgyIDE2LjI2MzcgMTIuMjk4MiAxNS41NDg3QzEyLjI5ODEgMTQuODMyNCAxMS43MTY0IDE0LjI1IDExLjAwMDggMTQuMjVaIiBmaWxsPSIjRTUwMDQ2Ii8+PC9zdmc+') no-repeat 0 0
+				
+	&--message
+		display block
+		font-size 12px
+		line-height 16px
+		font-family f-noto
+		margin 1px 0 0
+		
+		&_error
+			color colorRed
+			
+	&__agreement
+		text-align left
+		margin 42px 0 35px
+		
+		label
+			position relative
+			display inline-block
+			color colorDark
+			font-size 16px
+			line-height 24px
+			font-family f-noto
+			padding 0 0 2px 36px
+			
+			.checker
+				position absolute
+				left 0
+				top 0
+				
+	&_button
+		margin 53px 0 35px
+		
+.delivery
+	margin 1px 0 100px
+
+	&__row
+		max-width 1240px
+		padding 0 30px
+		margin 0 auto
+
+	&--intro
+		height 332px
+		
+	&-nav
+		display flex
+		justify-content space-evenly
+		text-align center
+		padding 53px 0 14px
+		
+		a
+			display inline-block
+			color #c0c0c0
+			font-size 54px
+			line-height 63px
+			margin 0 20px 40px
+			
+			&:hover
+				text-decoration underline
+				
+			&.is-active
+				color colorBlack
+				text-decoration underline
+			
+	&-table
+		width 100%
+		max-width 530px
+		margin 0 0 22px
+		
+		&--logo
+			display table-cell
+			max-width 100%
+			height auto
+			width 100px
+			text-align center
+			vertical-align middle
+			
+		&--text
+			display table-cell
+			font-size 16px
+			line-height 28px
+			font-family f-noto
+			vertical-align middle
+			padding 0 0 6px 39px
+				
+	&-tab	
+		&__content
+			font-size 0
+			padding 38px 25px 34px
+			background #ffffff
+			
+		&__lc
+			display inline-block
+			width 59.735%
+			padding 0 25px
+			
+			p
+				max-width 530px
+				color colorDark
+				font-size 16px
+				line-height 28px
+				font-family f-noto
+				margin 0 0 28px
+				
+		&--tracking
+			position relative
+			display inline-block
+			color colorBlue
+			font-size 16px
+			line-height 28px
+			font-family f-noto
+			text-decoration underline
+			padding-left 45px
+			margin -7px 0 28px
+
+			&:hover
+				text-decoration none
+				
+			svg
+				position absolute
+				left 6px
+				top 5px
+				fill colorBlue
+			
+		&__rc
+			display inline-block
+			width 40.265%
+			padding 0 25px
+			margin 12px 0 0
+			
+			&--title
+				display block
+				font-size 28px
+				line-height 36px
+				margin 0 0 30px
+			
+			&--subtitle
+				display block
+				font-size 24px
+				line-height 32px
+				margin 0 0 11px
+				
+			ul
+				margin 0 0 -5px
+				
+				li
+					margin 0 0 33px
+					
+				p
+					color colorDark
+					font-size 16px
+					line-height 29px
+					font-family f-noto
+					margin 0
+					
+					span
+						color colorRed
+			
+		&__message
+			padding 8px 50px 14px
+			background #e5e5e5
+			
+			&--text
+				position relative
+				display block
+				max-width 896px
+				font-size 16px
+				line-height 28px
+				font-family f-noto
+				padding 0 48px
+				margin 0 auto
+				
+				svg
+					position absolute
+					top 50%
+					left 0
+					fill #ff5722
+					margin-top -10px
+					
+	&-about
+		&__row
+			font-size 0
+			padding 102px 0 0
+			margin 0 -25px -24px
+			
+		&__lc
+			display inline-block
+			width 48.78%
+			padding 0 25px
+			
+			> :first-child
+				margin-top 0
+				
+			p
+				max-width 505px
+				font-size 16px
+				line-height 28px
+				font-family f-noto
+				margin 0 0 28px
+			
+		&--title
+			display block
+			max-width 505px
+			font-size 36px
+			line-height 42px
+			margin 36px 0 26px
+			
+			span
+				white-space nowrap
+			
+		&__rc
+			display inline-block
+			width 51.22%
+			padding 0 25px
+			margin-top 8px
+			
+		&--pic
+			height 856px
+			margin 0 0 28px
+
+@media (max-width 1239px)
+	.nav
+		margin-right 30px
+		
+	.card
+		&--pic
+			width 65.5%
+
+@media (max-width 991px)
+	.wrapper
+		padding-top 64px
+		padding-bottom 0
+
+	.panel
+		display none
+		
+	body.is-locked
+		overflow hidden
+		
+	header
+		position fixed
+		left 0
+		top 0
+		z-index 100
+		width 100%
+	
+		.nav
+			position fixed
+			left -100%
+			top 64px
+			z-index 99
+			width 100%
+			max-width none
+			height calc(100% - 44px)
+			text-align center
+			background #ffffff
+			transform translateX(0)
+			transition transform .4s ease
+			
+			&.is-opened
+				transform translateX(100%)
+			
+			&__row
+				overflow-y scroll
+				position absolute
+				left 0
+				top 0
+				display block
+				width 100%
+				height calc(100% - 20px)
+				padding 33px 0
+				
+			a
+				display block
+				font-size 20px
+				line-height 27px
+				padding 17px 15px 16px
+				margin 0
+				
+				&:after
+					display none
+					
+				&.is-red
+				&.is-blue
+					color colorWhite
+					
+				&.is-red
+					background-color colorRed
+					
+				&.is-blue
+					background-color colorBlue
+
+		.header
+			&--logo
+				position absolute
+				left 50%
+				top 0
+				width 125px
+				height 64px
+				margin-left -62px
+				background-position 15px 15px
+				background-size 95px 34px
+	
+			&__row
+				height 64px
+				padding 0 20px
+				
+			&--basket
+				width 30px
+				height 30px
+				margin 17px 0 0
+				
+				svg
+					width 30px
+					height 30px
+					
+	.header_footer
+		margin-top 0
+	
+		.header
+			&__row
+				height auto
+				text-align center
+				padding 10px 15px 15px
+				
+			&--logo
+				float none
+				display block
+				margin 0 auto 5px
+				
+			&--basket
+				display block
+				margin 0 auto 20px
+
+		.nav
+			margin 0 0 24px
+		
+			&__row
+				display block
+			
+			a
+				display block
+				padding 16px 0
+				
+				&:after
+					display none
+				
+	.menu-open
+		position absolute
+		left 0
+		top 0
+		display block
+		width 50px
+		height 64px
+		cursor pointer
+		
+		&:before
+		&:after
+			content ''
+			position absolute
+			left 50%
+			top 50%
+			width 18px
+			height 2px
+			margin-left -9px
+			background colorBlack
+			border-radius 1px
+			transition transform .2s ease, margin-top .2s ease
+			transition-delay 0s, .2s
+			transform-origin 50% 50%
+			
+		&:before
+			margin-top -4px
+			
+		&:after
+			margin-top 2px
+			
+		&.is-opened
+			&:before
+				transform rotate(-45deg)
+			
+			&:after
+				transform rotate(45deg)
+				
+			&:before
+			&:after
+				margin-top 0
+				transition-delay .2s, 0s
+
+	.intro
+		background-position 38% 100% !important
+	
+		&__row
+			min-height 400px
+			padding 0 15px
+			
+		&__content
+			left 15px
+			top 12.75%
+			max-width calc(100% - 30px)
+			
+	.category
+		overflow hidden
+
+		&--bg
+			position static
+			display block
+			width 100%
+			height auto
+			margin-top 0
+			margin-bottom 10px
+			background none !important
+			
+			img
+				display block !important
+				width 250%
+				height auto
+				margin 0 0 0 -30.3%
+			
+		&__row
+			display block
+			padding 0 15px
+			min-height 0
+			
+		&__content
+			display block
+			width auto
+			padding 0 0 17px
+			
+		&--title
+			display flex
+			align-items center
+			min-height 80px
+			max-width 480px
+			font-size 20px
+			line-height 25px
+			padding-left 90px
+			margin 0 auto 39px
+			
+		&--icon
+			left 0
+			margin-top -40px
+			
+		&__nav
+			max-width 480px
+			margin-left auto
+			margin-right auto
+
+		&--link
+			font-size 20px
+			line-height 27px
+			padding 15px 36px 7px 0
+			
+			&:after
+				top 21px
+				
+		.button
+			display block
+			width 280px
+			margin-left auto
+			margin-right auto
+			
+	.catalog
+		&__row
+			padding 100px 15px 0
+			
+		&__item
+			flex-wrap wrap
+			padding 0 0 100px
+			
+		&__col
+			&:first-child
+				order 2
+
+		&__col
+			display block
+			width 100%
+			padding 0
+			
+		&__pic
+			display block
+			width auto
+			max-width none
+			padding 0 !important
+			margin 0 -15px 33px
+		
+			&:before
+				display none
+			
+			&--title
+				display none
+				
+			&--item
+				max-width 520px
+				margin 0 auto
+				
+				&:after
+					display none
+					
+		&__content
+			display block
+			width auto
+			max-width 520px
+			padding 0
+			margin 0 auto
+			
+			p
+				max-width none
+				
+		&--title
+			display block
+			
+		&__icons
+			display block
+			margin -5px 0 17px
+			
+		&__controls
+			margin-top 25px
+			
+	.title-h1
+		font-size 48px
+		line-height 62px
+		
+	.content
+		&__header
+			padding 22px 15px 29px
+			
+	.breadcrumbs
+		margin-bottom 33px
+		
+	.basket
+		margin 0
+		
+		&__row
+			padding 0 15px 81px
+			
+		&-table
+			display block
+			
+		&-row
+			display block
+			margin 0 0 18px
+			border 1px solid #d0cece
+			
+		&-td
+			display block
+			border-width 0 !important
+			
+			&_remove
+				width auto
+				height 50px
+				
+			&_pic
+				width auto
+				margin 0 0 20px
+				background #efefef
+				
+			&_title
+				text-align center
+				padding 0 15px
+				margin 0 0 10px
+				
+			&_quantity
+				width auto
+				padding 0 15px
+				margin 0 0 30px
+				
+			&_price
+				width auto
+				padding 27px 15px 28px
+				
+		&--remove
+			margin-left -15px
+			
+		&--pic
+			width 288px
+			height 449px
+			margin 0 auto
+			
+	.elem-quantity
+		margin 0 auto
+		
+	.order
+		&-header
+			&__row
+				padding 25px 15px 34px
+	
+			&--title
+				font-size 36px
+				line-height 47px
+				margin 0 -10px
+				
+			&--subtitle
+				margin-top 12px
+				
+		&__row
+			padding 65px 15px 65px
+			
+	.form
+		max-width 480px
+		
+		&__agreement
+			margin-top 40px
+
+			label
+				line-height 28px
+				
+				.checker
+					top 2px
+					
+		&_button
+			margin-top 17px
+			
+	.delivery
+		margin 1px 0 100px
+	
+		&__row
+			padding 0 15px
+			
+		&--intro
+			margin 0 -15px
+			
+		&-nav
+			flex-wrap wrap
+			padding 55px 0 15px
+			
+			a
+				font-size 36px
+				line-height 37px
+				white-space nowrap
+				margin 0 15px 40px
+				
+		&-tab
+			margin 0 -15px
+			
+			&__content
+				padding 38px 15px 26px
+				
+			&__lc
+				display block
+				width auto
+				padding 0
+				margin 0 0 26px
+				
+				p
+					max-width none
+					
+			&--tracking
+				margin 0 0 28px
+					
+			&__rc
+				display block
+				width auto
+				padding 0
+				
+				&--title
+					margin-bottom 31px
+				
+				&--subtitle
+					line-height 30px
+					margin-bottom 8px
+					
+				ul
+					margin 0 0 28px
+				
+					li
+						margin 0 0 25px
+					
+					p
+						line-height 28px
+						margin 0 0 6px
+			
+			&__message
+				padding 17px 15px 26px
+				
+				&--text
+					display flex
+					align-items center
+					min-height 56px
+					
+					svg
+						top 10px
+						margin-top 0
+			
+		&-table
+			max-width none
+			
+			&--logo
+				display block
+				width auto
+				margin 0 0 24px
+				
+				img
+					max-width 100px
+					margin 0 auto
+			
+			&--text
+				padding 0
+				
+		&-about
+			&__row
+				padding 52px 0 0
+				margin 0
+				
+			&__lc
+				display block
+				width auto
+				padding 0
+				margin 0 0 53px
+				
+				p
+					max-width none
+				
+			&--title
+				max-width none
+				margin 35px 0 19px
+				
+			&__rc
+				display block
+				width auto
+				padding 0
+				margin 0 -15px
+				
+			&--pic
+				max-width 480px
+				margin 0 auto 28px
+				
+	.mobile-hide
+		display none
+
+	.card
+		&__row
+			min-height 0
+			padding 22px 15px 36px
+			
+		&--logo
+			margin-bottom 10px
+			
+		&--title
+			font-size 48px
+			line-height 62px
+			margin 0 0 41px
+			
+		&__content
+			margin 0
+			
+		&--pic
+			position static
+			width auto
+			margin -32px -15px 2px
+			background none !important
+			
+			img
+				display block !important
+				width 100%
+				height auto
+
+	.about
+		overflow hidden
+
+		&__row
+			padding 100px 15px 50px
+			
+		&__lc
+			display block
+			width auto
+			padding 0
+			margin 0 0 54px
+			
+		&--title
+			margin-bottom 22px
+		
+		&__content
+			max-width none
+			
+		&__rc
+			display flex
+			flex-wrap wrap
+			width auto
+			font-size 0
+			padding 0
+			margin 0 -30px 20px
+			
+		&-item
+			width calc(50% - 30px)
+			padding 26px 15px 24px
+			margin 0 15px 30px
+			
+			&--title
+				max-width 230px
+				font-size 30px
+				line-height 39px
+			
+			&--subtitle
+				max-width 230px
+				font-size 16px
+				line-height 28px
+				margin 17px 0 0
+				
+			&_delivery
+				& ^[-1]--subtitle
+					margin-top 16px
+
+	.title-bg
+		span
+			display flex
+			align-items center
+			justify-content center
+			min-height 270px
+			padding 50px 15px
+			
+	.articles
+		&__row
+			padding 36px 15px 0
+		
+		&__item
+			display block
+			width auto
+			padding 50px 0 0
+			margin 0 0 54px
+			
+		&--icon
+			left -2px
+			top 0
+			
+		&--title
+			margin-bottom 22px
+			
+		&-composition
+			height auto
+			padding 40px 15px 25px
+			margin 54px -15px -4px
+			
+			&--title
+				line-height 36px
+				margin-bottom 23px
+				
+			&__list
+				column-count 1
+				column-gap 0
+				
+				li
+					display block
+					
+				p
+					max-width none
+	.other
+		&__row
+			padding 334px 15px 41px
+
+		&--title
+			font-size 34px
+			line-height 44px
+			
+	.grid
+		overflow hidden
+		&__row
+			padding 50px 0 4px
+			margin 0 -15px
+			
+		&__item
+			width 50%
+			padding 0 15px
+			margin 0 0 96px
+			
+		&__controls
+			margin 0 15px
+			
+	.item-card
+		&--title
+			max-width 480px
+			line-height 36px
+			margin 0 auto 20px
+			
+		&--pic
+			max-width 480px
+			margin 0 auto 26px
+			
+		&--button
+			min-width 280px
+			margin 0 0 96px
+
+@media (max-width 639px)
+	.navigation
+		&--item
+			width 100%
+			
+	.card
+		&--pic
+			img
+				width 136%
+				margin-left -18%
+
+	.about
+		&-item
+			width calc(100% - 30px)
+			
+	.delivery
+		&-about
+			&--pic
+				height 480px !important
+			
+	.grid
+		&__item
+			width 100%

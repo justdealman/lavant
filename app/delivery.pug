@@ -1,0 +1,119 @@
+doctype html
+html(lang='ru')
+	title Lavant
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width, user-scalable=yes')
+	link(href='./css/style.css', rel='stylesheet')
+	body
+		include img/svg-icons.svg
+		.wrapper
+			include modules/header.pug
+			.content
+				.content__header
+					.breadcrumbs.breadcrumbs_blue
+						li
+							a(href='javascript:void(0);') Главная
+						li
+							span Оплата и доставка
+					span.title-h1 Оплата и доставка
+			.delivery
+				.delivery__row(data-tabs-container)
+					.delivery--intro
+						img.img-cover(src='./pic/delivery-intro.jpg', width='1180', height='332', alt='')
+					.delivery-nav(data-tabs-nav)
+						a.is-active(href='1') CDEK
+						a(href='2') Почта России
+						a(href='3') DPD
+					.delivery-tab(data-tabs-slider)
+						.delivery-tab__item
+							.delivery-tab__content
+								.delivery-tab__lc
+									.delivery-table
+										.delivery-table--logo
+											img(src='./pic/cdec-logo.png', width='100', height='100', alt='')
+										span.delivery-table--text При выборе способа доставки СДЭК, Вы получите посылку не выходя из дома или офиса.
+									p В любой момент времени Вы можете отследить, где сейчас находится Ваша посылка. Для этого просто уточните номер ID Вашей посылки (присваивается в течение 2 рабочих дней после принятия заказа) у нашего консультанта и воспользуйтесь специальным сервисом:
+									a.delivery-tab--tracking(href='javascript:void(0);') Отследить заказ СДЭК
+										svg(width='26', height='18')
+											use(href='#eye')
+								.delivery-tab__rc
+									span.delivery-tab__rc--title Стоимость доставки
+									ul
+										li
+											span.delivery-tab__rc--subtitle До пункта выдачи по всей России:
+											p #[span 300 рублей] для заказов до 3000 рублей.
+											p #[span Бесплатно] для заказов от 5000 рублей.
+										li
+											span.delivery-tab__rc--subtitle Курьером по всей России:
+											p #[span 350 рублей] для заказов до 3000 рублей.
+											p #[span Бесплатно] для заказов от 5000 рублей.
+							.delivery-tab__message
+								span.delivery-tab__message--text Курьер СДЭК свяжется с Вами до доставки, поэтому необходимо держать включенным указанный при заказе номер телефона, либо сообщить нашим консультантам другой номер для связи с Вами.
+									svg(width='26', height='26')
+										use(href='#tip')
+						.delivery-tab__item
+							.delivery-tab__content
+								.delivery-tab__lc
+									.delivery-table
+										.delivery-table--logo
+											img(src='./pic/cdec-logo.png', width='100', height='100', alt='')
+										span.delivery-table--text При выборе способа доставки СДЭК, Вы получите посылку не выходя из дома или офиса.
+									p В любой момент времени Вы можете отследить, где сейчас находится Ваша посылка.
+									a.delivery-tab--tracking(href='javascript:void(0);') Отследить заказ Почты России
+										svg(width='26', height='18')
+											use(href='#eye')
+								.delivery-tab__rc
+									span.delivery-tab__rc--title Стоимость доставки
+									ul
+										li
+											span.delivery-tab__rc--subtitle До пункта выдачи по всей России:
+											p #[span 300 рублей] для заказов до 3000 рублей.
+											p #[span Бесплатно] для заказов от 5000 рублей.
+							.delivery-tab__message
+								span.delivery-tab__message--text Курьер СДЭК свяжется с Вами до доставки, поэтому необходимо держать включенным указанный при заказе номер телефона, либо сообщить нашим консультантам другой номер для связи с Вами.
+									svg(width='26', height='26')
+										use(href='#tip')
+						.delivery-tab__item
+							.delivery-tab__content
+								.delivery-tab__lc
+									.delivery-table
+										.delivery-table--logo
+											img(src='./pic/cdec-logo.png', width='100', height='100', alt='')
+										span.delivery-table--text При выборе способа доставки СДЭК, Вы получите посылку не выходя из дома или офиса.
+									p В любой момент времени Вы можете отследить, где сейчас находится Ваша посылка. Для этого просто уточните номер ID Вашей посылки (присваивается в течение 2 рабочих дней после принятия заказа) у нашего консультанта и воспользуйтесь специальным сервисом:
+									a.delivery-tab--tracking(href='javascript:void(0);') Отследить заказ DPD
+										svg(width='26', height='18')
+											use(href='#eye')
+								.delivery-tab__rc
+									span.delivery-tab__rc--title Стоимость доставки
+									ul
+										li
+											span.delivery-tab__rc--subtitle До пункта выдачи по всей России:
+											p #[span 300 рублей] для заказов до 3000 рублей.
+											p #[span Бесплатно] для заказов от 5000 рублей.
+										li
+											span.delivery-tab__rc--subtitle Курьером по всей России:
+											p #[span 350 рублей] для заказов до 3000 рублей.
+											p #[span Бесплатно] для заказов от 5000 рублей.
+										li
+											span.delivery-tab__rc--subtitle Курьером по всей России:
+											p #[span 350 рублей] для заказов до 3000 рублей.
+											p #[span Бесплатно] для заказов от 5000 рублей.
+							.delivery-tab__message
+								span.delivery-tab__message--text Курьер СДЭК свяжется с Вами до доставки, поэтому необходимо держать включенным указанный при заказе номер телефона, либо сообщить нашим консультантам другой номер для связи с Вами.
+									svg(width='26', height='26')
+										use(href='#tip')
+					.delivery-about
+						.delivery-about__row
+							.delivery-about__lc
+								span.delivery-about--title Что же вас ждёт при заказе в #[span «M-cosmetics»]?
+								p Оплата покупки только после получения товара. Никаких рисков! #[br] возможность отслеживать местонахождение вашей посылки, а также получать уведомления о её перемещениях, что гарантирует вам спокойное ожидание. Скажем нет стрессу! #[br] грамотное сопровождение нашего оператора, которое позволит облегчить задачу по оформлению заказа и сориентирует по срокам. 
+								span.delivery-about--title Спешим поделиться, что:
+								p Наземная доставка в пункт выдачи заказа, включая Почту России, осуществляется по фиксированной цене и составляет всего 300 рублей по всей России. А при заказе на сумму от 3000 рублей мы с радостью возьмем на себя часть ваших расходов и обеспечим бесплатную доставку заказа экспресс-сервисами СДЭК и ДПД до пункта выдачи! #[br] оптовые заказы и заказы на сумму свыше 10000 рублей совершаются по 100%-ной предоплате! #[br] наземная доставка курьерскими службами ДПД и СДЭК осуществляется по единой цене - 350 рублей по всей России! А при заказе от 5000 рублей курьер совершенно бесплатно привезёт посылку прямо к вашему дому. Сплошная выгода и комфорт! #[br] мы гарантируем быструю авиадоставку в удалённые регионы по индивидуальным тарифам! #[br] Колоссальный ассортимент товаров и известные бренды в наличии по доступным ценам сделают процесс покупки в «M-cosmetics» ещё более приятным. И помните, ваше удобство – наша главная задача!
+							.delivery-about__rc
+								.delivery-about--pic
+									img.img-cover(src='./pic/delivery-about.jpg', width='580', height='856', alt='')
+		include modules/footer.pug
+		include modules/modals.pug
+		script(src='./js/libs.js')
+		script(src='./js/scripts.js')
