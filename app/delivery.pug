@@ -35,7 +35,7 @@ html(lang='ru')
 									p В любой момент времени Вы можете отследить, где сейчас находится Ваша посылка. Для этого просто уточните номер ID Вашей посылки (присваивается в течение 2 рабочих дней после принятия заказа) у нашего консультанта и воспользуйтесь специальным сервисом:
 									a.delivery-tab--tracking(href='javascript:void(0);') Отследить заказ СДЭК
 										svg(width='26', height='18')
-											use(href='#eye')
+											use(xlink:href='#eye')
 								.delivery-tab__rc
 									span.delivery-tab__rc--title Стоимость доставки
 									ul
@@ -50,7 +50,7 @@ html(lang='ru')
 							.delivery-tab__message
 								span.delivery-tab__message--text Курьер СДЭК свяжется с Вами до доставки, поэтому необходимо держать включенным указанный при заказе номер телефона, либо сообщить нашим консультантам другой номер для связи с Вами.
 									svg(width='26', height='26')
-										use(href='#tip')
+										use(xlink:href='#tip')
 						.delivery-tab__item
 							.delivery-tab__content
 								.delivery-tab__lc
@@ -61,7 +61,7 @@ html(lang='ru')
 									p В любой момент времени Вы можете отследить, где сейчас находится Ваша посылка.
 									a.delivery-tab--tracking(href='javascript:void(0);') Отследить заказ Почты России
 										svg(width='26', height='18')
-											use(href='#eye')
+											use(xlink:href='#eye')
 								.delivery-tab__rc
 									span.delivery-tab__rc--title Стоимость доставки
 									ul
@@ -72,7 +72,7 @@ html(lang='ru')
 							.delivery-tab__message
 								span.delivery-tab__message--text Курьер СДЭК свяжется с Вами до доставки, поэтому необходимо держать включенным указанный при заказе номер телефона, либо сообщить нашим консультантам другой номер для связи с Вами.
 									svg(width='26', height='26')
-										use(href='#tip')
+										use(xlink:href='#tip')
 						.delivery-tab__item
 							.delivery-tab__content
 								.delivery-tab__lc
@@ -83,7 +83,7 @@ html(lang='ru')
 									p В любой момент времени Вы можете отследить, где сейчас находится Ваша посылка. Для этого просто уточните номер ID Вашей посылки (присваивается в течение 2 рабочих дней после принятия заказа) у нашего консультанта и воспользуйтесь специальным сервисом:
 									a.delivery-tab--tracking(href='javascript:void(0);') Отследить заказ DPD
 										svg(width='26', height='18')
-											use(href='#eye')
+											use(xlink:href='#eye')
 								.delivery-tab__rc
 									span.delivery-tab__rc--title Стоимость доставки
 									ul
@@ -102,7 +102,7 @@ html(lang='ru')
 							.delivery-tab__message
 								span.delivery-tab__message--text Курьер СДЭК свяжется с Вами до доставки, поэтому необходимо держать включенным указанный при заказе номер телефона, либо сообщить нашим консультантам другой номер для связи с Вами.
 									svg(width='26', height='26')
-										use(href='#tip')
+										use(xlink:href='#tip')
 					.delivery-about
 						.delivery-about__row
 							.delivery-about__lc
@@ -114,6 +114,5 @@ html(lang='ru')
 								.delivery-about--pic
 									img.img-cover(src='./pic/delivery-about.jpg', width='580', height='856', alt='')
 		include modules/footer.pug
-		include modules/modals.pug
 		script(src='./js/libs.js')
 		script(src='./js/scripts.js')

@@ -62,7 +62,6 @@ $(function() {
 		var id = e.attr('href')-1;
 		var tabsContainer = e.parents('[data-tabs-container]')
 		tabsContainer.find('[data-tabs-slider]').slick('slickGoTo', id);
-		e.addClass('is-active').siblings().removeClass('is-active');
 	}
 	$('[data-tabs-nav] a').on('click', function(e) {
 		e.preventDefault();
@@ -72,6 +71,11 @@ $(function() {
 		setTab($(this));
 	})
 	$('[data-tabs-slider]').slick('setOption', 'speed', 500);
+	$('[data-tabs-slider]').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+		var id = nextSlide+1;
+		var links = $(this).parents('[data-tabs-container]').find('[data-tabs-nav]');
+		links.find('a[href="'+id+'"]').addClass('is-active').siblings().removeClass('is-active');
+	});
 
 	function startApp() {
 		detectDevice();

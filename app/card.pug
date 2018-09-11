@@ -21,16 +21,16 @@ html(lang='ru')
 						.card__icons.card__icons_blue
 							i.card--icon
 								svg(width='32', height='32')
-									use(href='#sun')
+									use(xlink:href='#sun')
 							i.card--icon
 								svg(width='20', height='30')
-									use(href='#water')
+									use(xlink:href='#water')
 							i.card--icon
 								svg(width='16', height='28')
-									use(href='#e')
+									use(xlink:href='#e')
 							i.card--icon
 								svg(width='20', height='30')
-									use(href='#water-filled')
+									use(xlink:href='#water-filled')
 					.card--pic.card--pic_left.mobile-hide
 						img(src='./pic/card-1.jpg', width='812', height='649', alt='')
 					.card--pic.card--pic_right
@@ -76,7 +76,7 @@ html(lang='ru')
 					.articles__item.articles__item_wide
 						i.articles--icon.articles--icon_blue
 							svg(width='20', height='30')
-								use(href='#water')
+								use(xlink:href='#water')
 						span.articles--title Аргановое масло - набор витаминов
 						p Натуральный продукт, который получают из плодов Аргании только в Марокко.Занимает наивысшую позицию среди остальных растительных масел, и считается одним из самых востребованных природных средств по уходу за волосами во всем мире.
 						.articles-composition
@@ -97,7 +97,7 @@ html(lang='ru')
 					.articles__item
 						i.articles--icon.articles--icon_blue
 							svg(width='16', height='28')
-								use(href='#e')
+								use(xlink:href='#e')
 						span.articles--title Витамин Е - глубокое #[br] увлажнение тканей
 						p Это питательное вещество, которое может использоваться для устранения многих недугов волос. Токоферол обладает хорошими проводящими свойствами и способствует глубокому увлажнению тканей.
 						p Благодаря его действию микроэлементы и вытяжки из профессиональных средств лучше и быстрее усваиваются. Он гипоаллергенен и совершенно нетоксичен.
@@ -106,7 +106,7 @@ html(lang='ru')
 					.articles__item
 						i.articles--icon.articles--icon_blue
 							svg(width='34', height='32')
-								use(href='#leaf')
+								use(xlink:href='#leaf')
 						span.articles--title Растительный протеин - строительный материал для волос
 						p Это строительный материал для волос, молекулы которого способны проникнуть под чешуйки волоса в места с потерянным белком и заполнить эти пробелы. Все специалисты утверждают, что волос не в состоянии взять в себя протеина больше, чем ему необходимо, что делает его применение универсальным и безопасным (полное исключение передозировок).
 						p Растительные протеины восстанавливают волоски изнутри, облегчают расчёсывание, придают блеск, объем, здоровый и ухоженный вид. Они хорошо укрепляют волос, проникая в него и заполняя собой пустоты. Так же помогают поддерживать нормальный уровень увлажнения и снижают электризуемость.
@@ -132,24 +132,23 @@ html(lang='ru')
 							.item-card--pic.scale
 								img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
 							span.item-card--price 2890 р.
-							button.button.button_basket.button_small
+							button.button.button_basket.button_small.button_blue
 					.grid__item
 						.item-card
 							span.item-card--title Balm
 							.item-card--pic.scale
 								img.img-cover(src='./pic/catalog-2.jpg', width='480', height='749', alt='')
 							span.item-card--price 2890 р.
-							button.button.button_basket.button_small
+							button.button.button_basket.button_small.button_blue
 					.grid__item
 						.item-card
 							span.item-card--title Balm
 							.item-card--pic.scale
 								img.img-cover(src='./pic/catalog-4.jpg', width='480', height='749', alt='')
 							span.item-card--price 2890 р.
-							button.button.button_basket.button_small
+							button.button.button_basket.button_small.button_blue
 					.grid__controls
 						button.button.button_blue.button_basket.item-card--button Купить весь набор
 		include modules/footer.pug
-		include modules/modals.pug
 		script(src='./js/libs.js')
 		script(src='./js/scripts.js')

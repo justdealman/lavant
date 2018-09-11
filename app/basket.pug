@@ -23,7 +23,7 @@ html(lang='ru')
 							.basket-td.basket-td_remove
 								span.basket--remove
 									svg(width='14', height='14')
-										use(href='#close')
+										use(xlink:href='#close')
 							.basket-td.basket-td_pic
 								.basket--pic
 									img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
@@ -40,7 +40,7 @@ html(lang='ru')
 							.basket-td.basket-td_remove
 								span.basket--remove
 									svg(width='14', height='14')
-										use(href='#close')
+										use(xlink:href='#close')
 							.basket-td.basket-td_pic
 								.basket--pic
 									img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
@@ -57,7 +57,7 @@ html(lang='ru')
 							.basket-td.basket-td_remove
 								span.basket--remove
 									svg(width='14', height='14')
-										use(href='#close')
+										use(xlink:href='#close')
 							.basket-td.basket-td_pic
 								.basket--pic
 									img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
@@ -100,6 +100,5 @@ html(lang='ru')
 							label #[input(type='checkbox', checked)] С условиями оферты ознакомлен и согласен
 						.button.button_order.form_button Оформить заказ
 		include modules/footer.pug
-		include modules/modals.pug
 		script(src='./js/libs.js')
 		script(src='./js/scripts.js')

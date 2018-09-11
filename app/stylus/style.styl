@@ -159,6 +159,7 @@ button
 		cursor pointer
 		margin -6px -24px 0 4px
 		background url('../img/panel-close.svg') no-repeat 0 0
+		background-size 100% 100%
 
 .header
 	background #ffffff
@@ -427,6 +428,30 @@ button
 	margin 0 0 40px
 	border-radius 28px
 	transition background-color .2s ease
+		
+	&_basket
+		&:after
+			content ''
+			display inline-block
+			width 16px
+			height 18px
+			margin 2px 0 4px 9px
+			background url('../img/basket-icon.svg') no-repeat 0 0
+			background-size 16px 18px
+			
+	&_small
+		min-width 0
+		width 36px
+		height 36px
+		padding 0
+		margin 0
+		background-color colorDark
+		
+		&:after
+			width 14px
+			height 18px
+			margin 8px 0 10px
+			background-size 14px 18px
 	
 	&_red
 		background-color colorRed
@@ -446,15 +471,6 @@ button
 		&:active
 			background-color #0064aa
 		
-	&_basket
-		&:after
-			content ''
-			display inline-block
-			width 16px
-			height 18px
-			margin 2px 0 4px 9px
-			background url('../img/basket-icon.svg') no-repeat 0 0
-		
 	&_mini
 		min-width 0
 		width 56px
@@ -462,23 +478,15 @@ button
 		&:after
 			margin-left 0
 			
-	&_small
-		min-width 0
-		width 36px
-		height 36px
-		padding 0
-		margin 0
-		background-color colorDark
-		
-		&:after
-			width 14px
-			height 18px
-			margin 8px 0 10px
-			background-size 14px 18px
-			
 	&_order
 		min-width 262px
 		background-color colorBlack
+		
+		&:hover
+			background-color colorGrey
+		
+		&:active
+			background-color colorDark
 
 .catalog
 	&__row
@@ -940,12 +948,12 @@ button
 		
 		&_discount
 			color colorGrey
-			background #eeeeee url('../pic/about-discount-bg.jpg') no-repeat 100% 100%
+			background #eeeeee url('../pic/about-discount-bg.png') no-repeat 100% 100%
 			background-size auto 100%
 		
 		&_delivery
 			color colorWhite
-			background colorDark  url('../pic/about-delivery-bg.jpg') no-repeat 100% 50%
+			background colorDark url('../pic/about-delivery-bg.png') no-repeat 100% 50%
 			background-size auto 100%
 			
 			& ^[-1]--subtitle
@@ -1184,6 +1192,7 @@ button
 	&-td
 		position relative
 		display table-cell
+		height 100%
 		vertical-align middle
 		border-bottom 1px solid #d0cece
 		border-top 1px solid #d0cece
@@ -1196,6 +1205,7 @@ button
 		
 		&_remove
 			width 8.35%
+			text-align center
 		
 		&_pic
 			width 179px
@@ -1204,7 +1214,7 @@ button
 			padding 20px 3.4% 20px 10.2%
 			
 		&_quantity
-			width 1%
+			width 26.44%
 			white-space nowrap
 			padding 20px 6.7% 20px
 			
@@ -1216,14 +1226,12 @@ button
 			background #f2f2f2
 			
 	&--remove
-		position absolute
-		left 50%
-		top 50%
-		display block
+		position relative
+		display inline-block
 		width 30px
 		height 30px
 		cursor pointer
-		margin -14px 0 0 -13px
+		margin 2px 0 0 2px
 		
 		svg
 			position absolute
@@ -1371,6 +1379,7 @@ button
 			font-family f-noto
 			padding 6px 50px 6px 0
 			border-bottom 1px solid colorGrey
+			border-radius 0
 			
 		&_success
 		&_error
@@ -1457,6 +1466,7 @@ button
 		
 	&-nav
 		display flex
+		justify-content space-around
 		justify-content space-evenly
 		text-align center
 		padding 53px 0 14px
@@ -1983,6 +1993,10 @@ button
 				padding 27px 15px 28px
 				
 		&--remove
+			position absolute
+			left 50%
+			top 50%
+			margin-top -14px
 			margin-left -15px
 			
 		&--pic
@@ -2309,6 +2323,11 @@ button
 			width calc(100% - 30px)
 			
 	.delivery
+		&-nav
+			a
+				width 100%
+				margin-left 0
+				margin-right 0
 		&-about
 			&--pic
 				height 480px !important

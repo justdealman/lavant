@@ -153,6 +153,7 @@ button::-moz-focus-inner {
 	cursor: pointer;
 	margin: -6px -24px 0 4px;
 	background: url("../img/panel-close.svg") no-repeat 0 0;
+	background-size: 100% 100%;
 }
 .header {
 	background: #fff;
@@ -441,6 +442,29 @@ button::-moz-focus-inner {
 	-o-transition: background-color 0.2s ease;
 	transition: background-color 0.2s ease;
 }
+.button_basket:after {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	margin: 2px 0 4px 9px;
+	background: url("../img/basket-icon.svg") no-repeat 0 0;
+	background-size: 16px 18px;
+}
+.button_small {
+	min-width: 0;
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	margin: 0;
+	background-color: #333;
+}
+.button_small:after {
+	width: 14px;
+	height: 18px;
+	margin: 8px 0 10px;
+	background-size: 14px 18px;
+}
 .button_red {
 	background-color: #e50046;
 }
@@ -459,14 +483,6 @@ button::-moz-focus-inner {
 .button_blue:active {
 	background-color: #0064aa;
 }
-.button_basket:after {
-	content: '';
-	display: inline-block;
-	width: 16px;
-	height: 18px;
-	margin: 2px 0 4px 9px;
-	background: url("../img/basket-icon.svg") no-repeat 0 0;
-}
 .button_mini {
 	min-width: 0;
 	width: 56px;
@@ -474,23 +490,15 @@ button::-moz-focus-inner {
 .button_mini:after {
 	margin-left: 0;
 }
-.button_small {
-	min-width: 0;
-	width: 36px;
-	height: 36px;
-	padding: 0;
-	margin: 0;
-	background-color: #333;
-}
-.button_small:after {
-	width: 14px;
-	height: 18px;
-	margin: 8px 0 10px;
-	background-size: 14px 18px;
-}
 .button_order {
 	min-width: 262px;
 	background-color: #000;
+}
+.button_order:hover {
+	background-color: #2e353a;
+}
+.button_order:active {
+	background-color: #333;
 }
 .catalog__row {
 	max-width: 1240px;
@@ -975,12 +983,12 @@ button::-moz-focus-inner {
 }
 .about-item_discount {
 	color: #2e353a;
-	background: #eee url("../pic/about-discount-bg.jpg") no-repeat 100% 100%;
+	background: #eee url("../pic/about-discount-bg.png") no-repeat 100% 100%;
 	background-size: auto 100%;
 }
 .about-item_delivery {
 	color: #fff;
-	background: #333 url("../pic/about-delivery-bg.jpg") no-repeat 100% 50%;
+	background: #333 url("../pic/about-delivery-bg.png") no-repeat 100% 50%;
 	background-size: auto 100%;
 }
 .about-item_delivery .about-item--subtitle {
@@ -1217,6 +1225,7 @@ button::-moz-focus-inner {
 .basket-td {
 	position: relative;
 	display: table-cell;
+	height: 100%;
 	vertical-align: middle;
 	border-bottom: 1px solid #d0cece;
 	border-top: 1px solid #d0cece;
@@ -1229,6 +1238,7 @@ button::-moz-focus-inner {
 }
 .basket-td_remove {
 	width: 8.35%;
+	text-align: center;
 }
 .basket-td_pic {
 	width: 179px;
@@ -1237,7 +1247,7 @@ button::-moz-focus-inner {
 	padding: 20px 3.4% 20px 10.2%;
 }
 .basket-td_quantity {
-	width: 1%;
+	width: 26.44%;
 	white-space: nowrap;
 	padding: 20px 6.7% 20px;
 }
@@ -1249,14 +1259,12 @@ button::-moz-focus-inner {
 	background: #f2f2f2;
 }
 .basket--remove {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	display: block;
+	position: relative;
+	display: inline-block;
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
-	margin: -14px 0 0 -13px;
+	margin: 2px 0 0 2px;
 }
 .basket--remove svg {
 	position: absolute;
@@ -1413,6 +1421,7 @@ button::-moz-focus-inner {
 	font-family: 'Noto Sans', sans-serif;
 	padding: 6px 50px 6px 0;
 	border-bottom: 1px solid #2e353a;
+	border-radius: 0;
 }
 .form--input_success:before,
 .form--input_error:before {
@@ -1498,6 +1507,8 @@ button::-moz-focus-inner {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
 	-webkit-box-pack: space-evenly;
 	-ms-flex-pack: space-evenly;
 	justify-content: space-evenly;
@@ -2047,6 +2058,10 @@ button::-moz-focus-inner {
 		padding: 27px 15px 28px;
 	}
 	.basket--remove {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -14px;
 		margin-left: -15px;
 	}
 	.basket--pic {
@@ -2377,6 +2392,11 @@ button::-moz-focus-inner {
 	}
 	.about-item {
 		width: calc(100% - 30px);
+	}
+	.delivery-nav a {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.delivery-about--pic {
 		height: 480px !important;
