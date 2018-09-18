@@ -335,8 +335,7 @@ button
 		display inline-block
 		width 50%
 		text-align left
-		padding-left 10px
-		padding-right 70px
+		padding 30px 70px 30px 10px
 		
 		p
 			font-size 16px
@@ -359,6 +358,7 @@ button
 			width 50px
 			height 50px
 			cursor pointer
+			margin-top -25px
 			background-color #ffffff
 			box-shadow 0px 0px 7px rgba(0, 0, 0, .2)
 			border-radius 50%
@@ -392,6 +392,15 @@ button
 				right 50%
 				margin-right -7px
 				background-image url('../img/slick-next.svg')
+				
+		@media (max-width 1239px)
+			.slick-prev
+				left 30px
+				margin-left 0
+
+			.slick-next
+				right 30px
+				margin-right 0
 		
 		&__item
 			position relative
@@ -399,7 +408,7 @@ button
 			
 			&.is-visible
 				opacity 1
-		
+
 		&--pic
 			position absolute
 			left 0
@@ -408,6 +417,9 @@ button
 			height 100%
 
 .navigation
+	position relative
+	z-index 1
+
 	&--item
 		display inline-block
 		color colorWhite
@@ -1049,12 +1061,18 @@ button
 			&.is-visible
 				opacity 1
 				transition all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+				-ms-transition none
 			
 			&_blue
 				background-color colorBlue
 			
 			&_red
 				background-color colorRed
+
+		@supports (-ms-ime-align auto)
+			&--bg
+				&.is-visible
+					transition none
 
 	&--price
 		position relative
@@ -1066,12 +1084,17 @@ button
 		padding 10px 0 11px
 		margin 0 10px 0 0
 		transition color .2s ease
-		
+		-ms-transition none
+
 		&_blue
 			color colorBlue
 			
 		&_red
 			color colorRed
+
+	@supports (-ms-ime-align auto)
+		&--price
+			transition none
 			
 	.button
 		margin-bottom 0
@@ -1832,6 +1855,10 @@ button
 			margin 0 0 28px
 
 @media (max-width 1239px)
+	.welcome
+		&--title
+			line-height 40px
+		
 	.nav
 		margin-right 30px
 		
@@ -2508,6 +2535,46 @@ button
 		&--button
 			min-width 280px
 			margin 0 0 96px
+			
+	.welcome
+		display block
+		
+		&__row
+			display block
+			padding 0 15px
+			
+		&__content
+			display block
+			width auto
+			padding 20px 0 30px
+			
+			p
+				font-size 15px
+			
+		&--title
+			font-size 30px
+			line-height 36px
+	
+		&-slider
+			position static
+
+			.slick-prev
+			.slick-next
+				display none
+				
+			.slick-list
+				height auto !important
+				
+			&--pic
+				position static
+				width 100%
+				height auto !important
+				background none !important
+				
+				img
+					display block !important
+					width 100%
+					height auto
 
 @media (max-width 639px)
 	.navigation

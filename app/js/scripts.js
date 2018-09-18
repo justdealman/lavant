@@ -88,7 +88,15 @@ $(function() {
 		fade: true,
 		cssEase: 'ease',
 		autoplay: true,
-		autoplaySpeed: 4000
+		autoplaySpeed: 4000,
+		responsive: [
+			{
+				breakpoint: 991,
+				settings: {
+					arrows: false
+				}
+			}
+		]
 	});
 	
 	function setMinCard() {
@@ -120,8 +128,13 @@ $(function() {
 		$('.welcome').css({
 			'min-height': min+'px'
 		});
-		var h = $('.welcome').outerHeight();
-		$('.welcome-slider__item').outerHeight(h).addClass('is-visible');
+		if ( !isMobile ) {
+			var h = $('.welcome').outerHeight();
+		} else {
+			var h = 'auto'
+		}
+		$('.welcome-slider .slick-list, .welcome-slider__item').outerHeight(h).addClass('is-visible');
+		$('.welcome-slider__item').addClass('is-visible');
 	}
 
 	function startApp() {
@@ -265,7 +278,7 @@ $(function() {
 		}
 	});
 	
-	$(document).on('scroll', function() {
+	$(window).on('scroll', function() {
 		if ( $('.card').length ) {
 			var start = $('.card').offset().top+($('.card').outerHeight())-$(window).height();
 			var end = $('.other').offset().top-$(window).height()+55;
@@ -281,4 +294,5 @@ $(function() {
 			}
 		}
 	});
+	$(window).trigger('scroll');
 });

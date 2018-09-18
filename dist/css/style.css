@@ -343,8 +343,7 @@ button::-moz-focus-inner {
 	display: inline-block;
 	width: 50%;
 	text-align: left;
-	padding-left: 10px;
-	padding-right: 70px;
+	padding: 30px 70px 30px 10px;
 }
 .welcome__content p {
 	font-size: 16px;
@@ -367,6 +366,7 @@ button::-moz-focus-inner {
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
+	margin-top: -25px;
 	background-color: #fff;
 	-webkit-box-shadow: 0px 0px 7px rgba(0,0,0,0.2);
 	box-shadow: 0px 0px 7px rgba(0,0,0,0.2);
@@ -405,6 +405,16 @@ button::-moz-focus-inner {
 	margin-right: -7px;
 	background-image: url("../img/slick-next.svg");
 }
+@media (max-width: 1239px) {
+	.welcome-slider .slick-prev {
+		left: 30px;
+		margin-left: 0;
+	}
+	.welcome-slider .slick-next {
+		right: 30px;
+		margin-right: 0;
+	}
+}
 .welcome-slider__item {
 	position: relative;
 	opacity: 0;
@@ -418,6 +428,10 @@ button::-moz-focus-inner {
 	top: 0;
 	width: 50%;
 	height: 100%;
+}
+.navigation {
+	position: relative;
+	z-index: 1;
 }
 .navigation--item {
 	display: inline-block;
@@ -1087,12 +1101,20 @@ button::-moz-focus-inner {
 	-webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	-o-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	-ms-transition: none;
 }
 .card__button--bg_blue {
 	background-color: #0578be;
 }
 .card__button--bg_red {
 	background-color: #e50046;
+}
+@supports (-ms-ime-align: auto) {
+	.card__button--bg.is-visible {
+		-webkit-transition: none;
+		-o-transition: none;
+		transition: none;
+	}
 }
 .card--price {
 	position: relative;
@@ -1106,12 +1128,20 @@ button::-moz-focus-inner {
 	-webkit-transition: color 0.2s ease;
 	-o-transition: color 0.2s ease;
 	transition: color 0.2s ease;
+	-ms-transition: none;
 }
 .card--price_blue {
 	color: #0578be;
 }
 .card--price_red {
 	color: #e50046;
+}
+@supports (-ms-ime-align: auto) {
+	.card--price {
+		-webkit-transition: none;
+		-o-transition: none;
+		transition: none;
+	}
 }
 .card .button {
 	margin-bottom: 0;
@@ -1885,6 +1915,9 @@ button::-moz-focus-inner {
 	margin: 0 0 28px;
 }
 @media (max-width: 1239px) {
+	.welcome--title {
+		line-height: 40px;
+	}
 	.nav {
 		margin-right: 30px;
 	}
@@ -2592,6 +2625,46 @@ button::-moz-focus-inner {
 	.item-card--button {
 		min-width: 280px;
 		margin: 0 0 96px;
+	}
+	.welcome {
+		display: block;
+	}
+	.welcome__row {
+		display: block;
+		padding: 0 15px;
+	}
+	.welcome__content {
+		display: block;
+		width: auto;
+		padding: 20px 0 30px;
+	}
+	.welcome__content p {
+		font-size: 15px;
+	}
+	.welcome--title {
+		font-size: 30px;
+		line-height: 36px;
+	}
+	.welcome-slider {
+		position: static;
+	}
+	.welcome-slider .slick-prev,
+	.welcome-slider .slick-next {
+		display: none;
+	}
+	.welcome-slider .slick-list {
+		height: auto !important;
+	}
+	.welcome-slider--pic {
+		position: static;
+		width: 100%;
+		height: auto !important;
+		background: none !important;
+	}
+	.welcome-slider--pic img {
+		display: block !important;
+		width: 100%;
+		height: auto;
 	}
 }
 @media (max-width: 639px) {
