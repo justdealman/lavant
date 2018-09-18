@@ -79,7 +79,11 @@ $(function() {
 	
 	function setMinCard() {
 		if ( !isMobile ) {
-			var min = $(window).height()-$('.card').offset().top;
+			if ( !$('.panel').hasClass('is-hidden') ) {
+				var min = $(window).height()-$('.panel').outerHeight()-$('.header').outerHeight();
+			} else {
+				var min = $(window).height()-$('.header').outerHeight();
+			}
 			if ( min < 800 ) {
 				min = 800;
 			}
@@ -89,6 +93,7 @@ $(function() {
 		$('.card__row').css({
 			'min-height': min+'px'
 		});
+		$('.card').addClass('is-visible');
 	}
 
 	function startApp() {
@@ -179,10 +184,16 @@ $(function() {
 	
 	
 	function panelOpen() {
-		$('.panel').stop().slideDown(300);
+		$('.panel').stop().slideDown(300).removeClass('is-hidden');
+		if ( $('.card').length ) {
+			setMinCard();
+		}
 	}
 	function panelClose() {
-		$('.panel').stop().slideUp(300);
+		$('.panel').stop().slideUp(300).addClass('is-hidden');
+		if ( $('.card').length ) {
+			setMinCard();
+		}
 	}
 	$('.panel--close').on('click', function() {
 		panelClose();
@@ -216,7 +227,7 @@ $(function() {
 	
 	$(document).on('scroll', function() {
 		var start = $('.card').offset().top+($('.card').outerHeight())-$(window).height();
-		var end = $('footer').offset().top-$(window).height();
+		var end = $('.other').offset().top-$(window).height()+55;
 		if ( $(document).scrollTop() > start && !isMobile )  {
 			$('.card__controls').addClass('is-fixed');
 			if ( $(document).scrollTop() > end ) {

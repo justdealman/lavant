@@ -786,6 +786,10 @@ button::-moz-focus-inner {
 	overflow: hidden;
 	position: relative;
 	background: #efefef;
+	opacity: 0;
+}
+.card.is-visible {
+	opacity: 1;
 }
 .card__row {
 	position: relative;
@@ -875,7 +879,7 @@ button::-moz-focus-inner {
 }
 .card--pic {
 	position: absolute;
-	bottom: 0;
+	top: 151px;
 	width: 812px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
