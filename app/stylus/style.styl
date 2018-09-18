@@ -186,10 +186,28 @@ button
 		background url('../img/logo.svg') no-repeat 30px 20px
 		
 	&--basket
+		position relative
 		display inline-block
 		width 40px
 		height 40px
 		margin 32px 0 0
+
+		span
+			position absolute
+			left 18px
+			top 0
+			display block
+			min-width 23px
+			color colorWhite
+			font-size 14px
+			line-height 16px
+			font-weight bold
+			font-family f-futura
+			text-align center
+			padding 0 5px 1px
+			background colorBlack
+			border 3px solid colorWhite
+			border-radius 12px
 		
 		svg
 			fill colorBlack
@@ -1788,6 +1806,13 @@ button
 				width 30px
 				height 30px
 				margin 17px 0 0
+				
+				span
+					font-size 13px
+					line-height 15px
+					padding-top 1px
+					margin-top -3px
+					margin-left -2px
 				
 				svg
 					width 30px
