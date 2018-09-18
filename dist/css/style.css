@@ -801,7 +801,7 @@ button::-moz-focus-inner {
 	justify-content: space-between;
 	max-width: 1240px;
 	min-height: 800px;
-	padding: 22px 30px 60px;
+	padding: 22px 30px 70px;
 	margin: 0 auto;
 }
 .card__content {
@@ -898,13 +898,66 @@ button::-moz-focus-inner {
 	font-size: 0;
 	text-align: center;
 }
+.card__controls.is-fixed {
+	position: fixed;
+	left: 0;
+	z-index: 100;
+	bottom: 70px;
+	width: 100%;
+}
+.card__button {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	padding: 15px 20px;
+	background: rgba(255,255,255,0.6);
+	border-radius: 43px;
+}
+.card__button .button {
+	position: relative;
+	z-index: 1;
+}
+.card__button .button_blue:hover {
+	background-color: #0578be;
+}
+.card__button .button_red:hover {
+	background-color: #e50046;
+}
+.card__button:hover .card__button--bg {
+	border-radius: 43px;
+}
+.card__button:hover .card--price {
+	color: #fff !important;
+}
+.card__button--bg {
+	position: absolute;
+	opacity: 0;
+	border-radius: 50%;
+}
+.card__button--bg.is-visible {
+	opacity: 1;
+	-webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	-o-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card__button--bg_blue {
+	background-color: #0578be;
+}
+.card__button--bg_red {
+	background-color: #e50046;
+}
 .card--price {
+	position: relative;
+	z-index: 1;
 	display: inline-block;
 	font-size: 30px;
 	line-height: 35px;
 	text-transform: uppercase;
 	padding: 10px 0 11px;
 	margin: 0 10px 0 0;
+	-webkit-transition: color 0.2s ease;
+	-o-transition: color 0.2s ease;
+	transition: color 0.2s ease;
 }
 .card--price_blue {
 	color: #0578be;
@@ -2247,6 +2300,10 @@ button::-moz-focus-inner {
 		display: block !important;
 		width: 100%;
 		height: auto;
+	}
+	.card__controls.is-fixed {
+		position: static;
+		bottom: auto;
 	}
 	.about {
 		overflow: hidden;

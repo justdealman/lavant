@@ -775,7 +775,7 @@ button
 		justify-content space-between
 		max-width 1240px
 		min-height 800px
-		padding 22px 30px 60px
+		padding 22px 30px 70px
 		margin 0 auto
 		
 	&__content
@@ -869,13 +869,65 @@ button
 		font-size 0
 		text-align center
 		
+		&.is-fixed
+			position fixed
+			left 0
+			z-index 100
+			bottom 70px
+			width 100%
+		
+	&__button
+		position relative
+		display inline-block
+		cursor pointer
+		padding 15px 20px
+		background rgba(255,255,255,.6)
+		border-radius 43px
+		
+		.button
+			position relative
+			z-index 1
+		
+		.button_blue
+			&:hover
+				background-color colorBlue
+		
+		.button_red
+			&:hover
+				background-color colorRed
+			
+		&:hover
+			& ^[-1]--bg
+				border-radius 43px
+					
+			& ^[-2]--price
+				color #ffffff !important
+
+		&--bg
+			position absolute
+			opacity 0
+			border-radius 50%
+			
+			&.is-visible
+				opacity 1
+				transition all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+			
+			&_blue
+				background-color colorBlue
+			
+			&_red
+				background-color colorRed
+
 	&--price
+		position relative
+		z-index 1
 		display inline-block
 		font-size 30px
 		line-height 35px
 		text-transform uppercase
 		padding 10px 0 11px
 		margin 0 10px 0 0
+		transition color .2s ease
 		
 		&_blue
 			color colorBlue
@@ -2181,7 +2233,12 @@ button
 				display block !important
 				width 100%
 				height auto
-
+				
+		&__controls
+			&.is-fixed
+				position static
+				bottom auto
+			
 	.about
 		overflow hidden
 
