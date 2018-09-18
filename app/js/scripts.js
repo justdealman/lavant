@@ -77,6 +77,20 @@ $(function() {
 		links.find('a[href="'+id+'"]').addClass('is-active').siblings().removeClass('is-active');
 	});
 	
+	$('.welcome-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		infinite: true,
+		speed: 750,
+		adaptiveHeight: true,
+		fade: true,
+		cssEase: 'ease',
+		autoplay: true,
+		autoplaySpeed: 4000
+	});
+	
 	function setMinCard() {
 		if ( !isMobile ) {
 			if ( !$('.panel').hasClass('is-hidden') ) {
@@ -95,6 +109,20 @@ $(function() {
 		});
 		$('.card').addClass('is-visible');
 	}
+	
+	function setWelcome() {
+		var ratio = 498/1920;
+		if ( !isMobile ) {
+			var min = $('.welcome').outerWidth()*ratio;
+		} else {
+			var min = 0;
+		}
+		$('.welcome').css({
+			'min-height': min+'px'
+		});
+		var h = $('.welcome').outerHeight();
+		$('.welcome-slider__item').outerHeight(h).addClass('is-visible');
+	}
 
 	function startApp() {
 		detectDevice();
@@ -106,6 +134,9 @@ $(function() {
 			}
 		}
 		setRatio();
+		if ( $('.welcome').length ) {
+			setWelcome();
+		}
 		if ( $('.card').length ) {
 			setMinCard();
 		}
@@ -221,22 +252,33 @@ $(function() {
 			height: 100+'%'
 		});
 	});
+	$('.card__button').on('click', function() {
+		if ( !$(this).hasClass('is-active') ) {
+			$(this).addClass('is-active');
+		} else {
+			$(this).removeClass('is-active');
+		}
+	});
 	$('.card__button').on('mouseleave', function() {
-		setPriceBg($(this).find('.card__button--bg'));
+		if ( !$(this).hasClass('is-active') ) {
+			setPriceBg($(this).find('.card__button--bg'));
+		}
 	});
 	
 	$(document).on('scroll', function() {
-		var start = $('.card').offset().top+($('.card').outerHeight())-$(window).height();
-		var end = $('.other').offset().top-$(window).height()+55;
-		if ( $(document).scrollTop() > start && !isMobile )  {
-			$('.card__controls').addClass('is-fixed');
-			if ( $(document).scrollTop() > end ) {
-				$('.card__controls').css({
-					marginBottom: $(document).scrollTop()-end
-				});
+		if ( $('.card').length ) {
+			var start = $('.card').offset().top+($('.card').outerHeight())-$(window).height();
+			var end = $('.other').offset().top-$(window).height()+55;
+			if ( $(document).scrollTop() > start && !isMobile )  {
+				$('.card__controls').addClass('is-fixed');
+				if ( $(document).scrollTop() > end ) {
+					$('.card__controls').css({
+						marginBottom: $(document).scrollTop()-end
+					});
+				}
+			} else {
+				$('.card__controls').removeClass('is-fixed');
 			}
-		} else {
-			$('.card__controls').removeClass('is-fixed');
 		}
 	});
 });

@@ -8,12 +8,27 @@ html(lang='ru')
 		include img/svg-icons.svg
 		.wrapper
 			include modules/header.pug
-			.intro
-				.intro__row
-					.intro__content
-						span.intro--title #[span 15%] Скидка
-						span.intro--text На все BEAUTY BOX
-				img(src='./pic/intro-1.jpg', width='1920', height='500', class='img-cover', alt='')
+			.welcome
+				.welcome__row
+					.welcome__content
+						span.welcome--title до #[span 01.11] при покупке #[span 2х] средств - косметичка в подарок
+						p Чудо-косметичка органайзер из двухсторонней тонкой непромокаемой прочной ткани, очень вместительная. при раскрытии все предметы как на ладони, даже самые мелкие, можно использовать как сумочку.
+				.welcome-slider
+					.welcome-slider__item
+						.welcome-slider--pic
+							img.img-cover(src='./pic/welcome-1.jpg', width='960', height='498', alt='')
+					.welcome-slider__item
+						.welcome-slider--pic
+							img.img-cover(src='./pic/welcome-2.jpg', width='960', height='498', alt='')
+					.welcome-slider__item
+						.welcome-slider--pic
+							img.img-cover(src='./pic/welcome-3.jpg', width='960', height='498', alt='')
+					.welcome-slider__item
+						.welcome-slider--pic
+							img.img-cover(src='./pic/welcome-4.jpg', width='960', height='498', alt='')
+					.welcome-slider__item
+						.welcome-slider--pic
+							img.img-cover(src='./pic/welcome-5.jpg', width='960', height='498', alt='')
 			.navigation
 				span.navigation--item.navigation--item_blue #[i.navigation--icon.navigation--icon_ombrage]Ombrage
 				span.navigation--item.navigation--item_red #[i.navigation--icon.navigation--icon_update]Update
