@@ -265,7 +265,7 @@ $(function() {
 			height: 100+'%'
 		});
 	});
-	$('.card__button').on('click', function() {
+	$('.card__button, [data-add]').on('click', function() {
 		if ( !$(this).hasClass('is-active') ) {
 			$(this).addClass('is-active');
 		} else {

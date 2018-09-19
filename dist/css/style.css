@@ -603,6 +603,10 @@ button::-moz-focus-inner {
 	background: url("../img/basket-icon.svg") no-repeat 0 0;
 	background-size: 16px 18px;
 }
+.button_basket.is-active:after {
+	background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMC44NDAwOTggOC44QzAuNjgwMDk4IDguNjQgMC42MDAwOTggOC40IDAuNjAwMDk4IDguMjRDMC42MDAwOTggOC4wOCAwLjY4MDA5OCA3Ljg0IDAuODQwMDk4IDcuNjhMMS45NjAxIDYuNTZDMi4yODAxIDYuMjQgMi43NjAxIDYuMjQgMy4wODAxIDYuNTZMMy4xNjAxIDYuNjRMNy41NjAxIDExLjM2QzcuNzIwMSAxMS41MiA3Ljk2MDEgMTEuNTIgOC4xMjAxIDExLjM2TDE4Ljg0MDEgMC4yNEgxOC45MjAxVjAuMjRDMTkuMjQwMSAtMC4wOCAxOS43MjAxIC0wLjA4IDIwLjA0MDEgMC4yNEwyMS4xNjAxIDEuMzZDMjEuNDgwMSAxLjY4IDIxLjQ4MDEgMi4xNiAyMS4xNjAxIDIuNDhMOC4zNjAxIDE1Ljc2QzguMjAwMSAxNS45MiA4LjA0MDEgMTYgNy44MDAxIDE2QzcuNTYwMSAxNiA3LjQwMDEgMTUuOTIgNy4yNDAxIDE1Ljc2TDEuMDAwMSA5LjA0TDAuODQwMDk4IDguOFY4LjhaIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+") no-repeat 50% 75%;
+	background-size: 16px auto;
+}
 .button_small {
 	min-width: 0;
 	width: 36px;

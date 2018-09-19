@@ -134,23 +134,23 @@ html(lang='ru')
 							.item-card--pic.scale
 								img.img-cover(src='./pic/catalog-1.jpg', width='480', height='749', alt='')
 							span.item-card--price 2890 р.
-							button.button.button_basket.button_small.button_blue
+							button.button.button_basket.button_small.button_blue(data-add)
 					.grid__item
 						.item-card
 							span.item-card--title Balm
 							.item-card--pic.scale
 								img.img-cover(src='./pic/catalog-2.jpg', width='480', height='749', alt='')
 							span.item-card--price 2890 р.
-							button.button.button_basket.button_small.button_blue
+							button.button.button_basket.button_small.button_blue(data-add)
 					.grid__item
 						.item-card
 							span.item-card--title Balm
 							.item-card--pic.scale
 								img.img-cover(src='./pic/catalog-4.jpg', width='480', height='749', alt='')
 							span.item-card--price 2890 р.
-							button.button.button_basket.button_small.button_blue
+							button.button.button_basket.button_small.button_blue(data-add)
 					.grid__controls
-						button.button.button_blue.button_basket.item-card--button Купить весь набор
+						button.button.button_blue.button_basket.item-card--button(data-add) Купить весь набор
 		include modules/footer.pug
 		script(src='./js/libs.js')
 		script(src='./js/scripts.js')
