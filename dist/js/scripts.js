@@ -226,15 +226,38 @@ $(function() {
 		$input.change();
 	});
 	
-	
+	function setWrapper(e) {
+		if ( e == 0 ) {
+			var panel = 0;
+			$('header.header').addClass('is-top');
+		} else {
+			var panel = 54;
+			$('header.header').removeClass('is-top');
+		}
+		$('.wrapper').css({
+			'padding-top': $('header.header').outerHeight()+panel
+		});
+	}
+	if ( !$('.panel').length || $('.panel').hasClass('is-hidden') ) {
+		setWrapper(0);
+	}
+	$(window).on('scroll', function() {
+		if ( $(document).scrollTop() > $('.panel').outerHeight() ) {
+			$('header.header').addClass('is-fixed');
+		} else {
+			$('header.header').removeClass('is-fixed');
+		}
+	});
 	function panelOpen() {
-		$('.panel').stop().slideDown(300).removeClass('is-hidden');
+		$('.panel').removeClass('is-hidden');
+		setWrapper(1);
 		if ( $('.card').length ) {
 			setMinCard();
 		}
 	}
 	function panelClose() {
-		$('.panel').stop().slideUp(300).addClass('is-hidden');
+		$('.panel').addClass('is-hidden');
+		setWrapper(0);
 		if ( $('.card').length ) {
 			setMinCard();
 		}
