@@ -1,0 +1,91 @@
+doctype html
+html(lang='ru')
+	title Lavant
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width, user-scalable=yes')
+	link(href='./css/style.css', rel='stylesheet')
+	body
+		include img/svg-icons.svg
+		.wrapper
+			include modules/header.pug
+			.content
+				.content__header
+					.breadcrumbs.breadcrumbs_blue
+						li
+							a(href='javascript:void(0);') Главная
+						li
+							span Преимущества
+					span.title-h1.title-h1_mini Преимущества
+				.benefits
+					.benefits-about
+						span.benefits-about--title L'avant
+						.benefits-about__grid
+							.benefits-about__col
+								p Лаборатория, расположенная во Франции, которая использует в своем производстве только инновационные компоненты и натуральные масла.
+								p Именно это совмещение показало высокие результаты! 
+								p Мы тщательно подбирали составы для разработки наших серии #[strong.is-blue UPDATE] и #[strong.is-red OMBRAGE], и после многих тестов, выбрали наряду с проверенными органическими маслами три действующих комплекса
+								.benefits-complex
+									.benefits-complex__item
+										.benefits-complex--icon
+											include img/prebiotic-icon.svg
+										span.benefits-complex--text Пребиотики
+									.benefits-complex__item
+										.benefits-complex--icon
+											include img/silicon-icon.svg
+										span.benefits-complex--text Кремнийоргани- ческие соединения
+									.benefits-complex__item
+										.benefits-complex--icon
+											include img/polysaccharide-icon.svg
+										span.benefits-complex--text Полисахариды
+							.benefits-about__col
+								p Продукты L'AVANT дают видимый эффект уже с первого применения за счет современных компонентов, подобранных во Франции.
+								p #[strong Лаборатория разработала 2 серии для волос]
+								.benefits-series
+									.benefits-series__item.benefits-series__item_blue
+										.benefits-series--icon.benefits-series--icon_ombrage
+											include img/logo-ombrage.svg
+										span.benefits-series--text OMBRAGE - серия для окрашенных волос.
+									.benefits-series__item.benefits-series__item_red
+										.benefits-series--icon.benefits-series--icon_update
+											include img/logo-update.svg
+										span.benefits-series--text UPDATE - серия восстановления
+					.benefits-products
+						.benefits-products__item
+							span.benefits-products--title Shampoo
+							p Очищает, увлажняет волосы, подготавливая к дальнейшим процедурам.
+						.benefits-products__item
+							span.benefits-products--title Balm
+							p Восстанавливает, кондиционирует волосы, создает защитную пленку от внешних воздействий.
+						.benefits-products__item
+							span.benefits-products--title Hair Mask
+							p Глубоко питает, наполняет и поддерживает ресурсы волос в должном состоянии.
+						.benefits-products__item
+							span.benefits-products--title Spray and Oil
+							p Имеют высочайшие защитные свойства от температур, солнечного излучения. Закрепляют полученные результаты, снимают статическое  электричество.
+					.benefits-recommend
+						.benefits-recommend__text
+							svg(width='26', height='20')
+								use(xlink:href='#check')
+							p Мы рекомендуем использовать продукты в комплексе с другими средствами из серии #[strong.is-red UPDATE] или #[strong.is-blue OMRАGE], ведь наши специалисты тщательно разрабатывали линейки,  для достижения максимального эффекта.
+					.benefits-elements
+						.benefits-elements__item
+							i.benefits-elements--icon
+								include img/prebiotic-icon.svg
+							span.benefits-elements--title Пребиотики
+							p Пребиотики – это комплекс веществ, которые благоприятно влияют на функционирование полезной микрофлоры. Они служат питательным веществом для полезных микроорганизмов и подавляют рост патогенных. Пребиотики помогают устранить воспалительные процессы, не позволяют появляться ощущению сухости и стянутости, регенерируют клетки.
+						.benefits-elements__item
+							i.benefits-elements--icon
+								include img/silicon-icon.svg
+							span.benefits-elements--title Кремнийорганические соединения
+							p Кремнийорганические соединения - соединения, в молекулах которых имеется связь между атомами кремния и углерода.
+							p Они приглаживают чешуйки, придавая гладкость, блеск и мягкость натурального шелка. Не утяжеляет волосы, не создают эффекта накопления. Также создают воздухопроницаемую пленку, которая защищает волосы от негативного воздействия окружающей среды, предотвращает от повреждений высокими температурами и УФ.
+						.benefits-elements__item
+							i.benefits-elements--icon
+								include img/polysaccharide-icon.svg
+							span.benefits-elements--title Полисахариды
+							p Полисахариды - это природные высокомолекулярные сложные углероды. Они являются очень важными строительными элементами для клеток, участвуют в восстановительных процессах.
+							p Полисахариды активно увлажняют, препятствуют потере влаги, избавляет кожу от раздражений, мелких повреждений (ранки, расчесы)
+							p Многократно повышает упругость и эластичность. Оказывают регенерирующее, общеукрепляющее, витаминизирующее, противовирусное действие.
+		include modules/footer.pug
+		script(src='./js/libs.js')
+		script(src='./js/scripts.js')

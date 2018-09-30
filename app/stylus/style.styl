@@ -2,6 +2,7 @@
 
 @import './mixins/fonts.styl'
 webfont('Futura PT', 'futurapt-regular', normal)
+webfont('Futura PT', 'futurapt-bold', bold)
 webfont('Noto Sans', 'notosans-regular', normal)
 
 // Variables
@@ -1902,6 +1903,220 @@ header.header
 		&--pic
 			height 856px
 			margin 0 0 28px
+			
+.benefits
+	max-width 1240px
+	padding 0 30px
+	margin -19px auto 0
+
+	.is-red
+		color #bf2b45
+
+	.is-blue
+		color #1f3a60
+
+	&-about
+		padding 52px 50px 26px
+		background #ffffff
+		
+		&--title
+			display block
+			font-size 36px
+			line-height 42px
+			text-transform uppercase
+			padding 0
+			margin 0 0 26px
+			
+		&__grid
+			font-size 0
+			margin 0 -40px 0 -10px
+			
+		&__col
+			display inline-block
+			width 50%
+			padding 0 40px 0 10px
+			
+			p
+				max-width 430px
+				color colorDark
+				font-size 16px
+				line-height 28px
+				font-family f-noto
+				margin 0 0 28px
+
+	&-series
+		margin -4px 0 28px
+		
+		&__item
+			display flex
+			align-items center
+			font-size 0
+			min-height 137px
+			padding 20px 40px
+			margin 0 0 10px
+			
+			&_red
+				background-color #bf2b45
+			
+			&_blue
+				background-color #1f3a60
+				
+		&--icon
+			position relative
+			display inline-block
+			width 73px
+			height 91px
+			
+			svg
+				position absolute
+				left 50%
+				top 50%
+				width auto
+				transform translate(-50%,-50%)
+				
+			&_ombrage
+				height 87px
+				
+			&_update
+				height 91px
+			
+		&--text
+			display inline-block
+			width calc(100% - 73px)
+			color colorWhite
+			font-size 16px
+			line-height 28px
+			font-family f-noto
+			padding 0 0 0 30px
+			
+	&-complex
+		display inline-block
+		font-size 0
+		margin 7px -16px 0
+		
+		&__item
+			display inline-block
+			max-width 192px
+			padding 0 16px
+			margin 0 0 28px
+			
+		&--icon
+			position relative
+			width 80px
+			height 80px
+			margin 0 auto 16px
+			
+			img
+			svg
+				position absolute
+				left 50%
+				top 50%
+				transform translate(-50%,-50%) scale(2)
+				
+				path
+					fill #1f3a60
+				
+		&--text
+			display block
+			font-size 16px
+			line-height 28px
+			text-align center
+			font-family f-noto
+			
+	&-products
+		font-size 0
+		padding 72px 0 14px
+		margin 0 -15px
+		
+		&__item
+			display inline-block
+			width 25%
+			padding 0 15px
+			margin 0 0 40px
+			
+			p
+				color colorDark
+				font-size 16px
+				line-height 28px
+				font-family f-noto
+				margin 0
+			
+		&--title
+			display block
+			font-size 36px
+			line-height 42px
+			text-transform uppercase
+			padding 0
+			margin 0 0 20px
+			
+	&-recommend
+		padding 30px 40px 36px
+		background #e5e5e5
+		
+		&__text
+			position relative
+			display block
+			max-width 930px
+			padding-left 54px
+			margin 0 auto
+			
+			svg	
+				position absolute
+				left 5px
+				top 50%
+				fill #cddc39
+				margin-top -7px
+			
+			p
+				font-size 16px
+				line-height 28px
+				font-family f-noto
+				margin 0
+				
+	&-elements
+		column-count 2
+		column-gap 20px
+		padding 100px 0 59px
+		
+		&--icon
+			position absolute
+			left 0
+			top 2px
+			width 40px
+			height 40px
+			
+			svg
+			img
+				position absolute
+				left 50%
+				top 50%
+				transform translate(-50%,-50%)
+				
+			svg
+				fill #1f3a60
+				
+				path
+					fill #1f3a60
+		
+		&__item
+			position relative
+			padding-left 60px
+			padding-bottom 45px
+			break-inside avoid
+
+			p
+				color colorDark
+				font-size 16px
+				line-height 28px
+				font-family f-noto
+				margin 0
+			
+		&--title
+			display block
+			font-size 36px
+			line-height 42px
+			padding 0
+			margin 0 0 26px
 
 @media (max-width 1239px)
 	.welcome
@@ -1914,6 +2129,31 @@ header.header
 	.card
 		&--pic
 			width 65.5%
+			
+	.benefits
+		&-about
+			padding-left 30px
+			padding-right 30px
+			
+			&__grid
+				margin-right -20px
+				
+			&__col
+				padding-right 20px
+				
+		&-complex
+			margin-left -10px
+			margin-right -10px
+			
+			&__item
+				padding 0 10px
+				
+			&--text
+				font-size 15px
+				
+		&-products
+			&__item
+				width 50%
 
 @media (max-width 991px)
 	.wrapper
@@ -2626,6 +2866,47 @@ header.header
 					display block !important
 					width 100%
 					height auto
+					
+	.benefits
+		padding 0 15px
+		
+		&-about
+			padding-left 15px
+			padding-right 15px
+			margin 0 -15px
+			
+			&__grid
+				margin 0
+				
+			&__col
+				width 100%
+				padding 0
+				
+				p
+					max-width none
+					
+		&-series
+			&__item
+				padding-left 20px
+				padding-right 20px
+				
+			&--text
+				padding-left 20px
+					
+		&-complex
+			display block
+			text-align center
+		
+			&--text
+				font-size 16px
+				
+		&-recommend
+			padding-left 15px
+			padding-right 15px
+			margin 0 -15px
+			
+		&-elements
+			column-count 1
 
 @media (max-width 639px)
 	.navigation
@@ -2655,3 +2936,51 @@ header.header
 	.grid
 		&__item
 			width 100%
+			
+	.title-h1
+		&_mini
+			font-size 36px
+			
+	.benefits
+		&-complex
+			&__item
+				display block
+				max-width none
+				
+			&--text
+				max-width 172px
+				margin-left auto
+				margin-right auto
+					
+		&-series
+			&__item
+				padding-left 15px
+				padding-right 15px
+				margin-left -15px
+				margin-right -15px
+				
+		&-products
+			&__item
+				width 100%
+				
+		&-recommend
+			&__text
+				padding-left 0
+				padding-top 30px
+				
+				svg
+					left 0
+					top 0
+					margin-top 0
+					
+		&-elements
+			&__item
+				padding-top 50px
+				padding-left 0
+				
+			&--icon
+				left -2px
+				top 0
+				
+			&--title
+				font-size 32px
